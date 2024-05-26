@@ -5,10 +5,9 @@ layout: home
 hero:
   name: "Rew"
   text: "A simple coffeescript runtime"
-  image:
-    src: https://raw.githubusercontent.com/kevinJ045/rew/main/assets/logo.png
-    alt: logo
-    width: 200
+  #image:
+  #  src: /assets/logo.png
+  #  alt: logo
   actions:
     - theme: brand
       text: Introduction
@@ -18,11 +17,11 @@ hero:
       link: /getting-started
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 🚀 JIT Runtime Execution
+    details: Rew provides a just-in-time (JIT) runtime for CoffeeScript, allowing you to execute CoffeeScript files quickly and efficiently without pre-compilation
+  - title: 🛠️ File Watching and Auto-Rerun
+    details: With the -w or --watch option, Rew can watch your CoffeeScript files for changes and automatically rerun them, streamlining your development workflow by providing instant feedback on code modifications
+  - title: 📦 Project Creation and Management
+    details: Rew includes commands to easily create new CoffeeScript projects and manage their configurations, simplifying the setup process and helping you maintain organized project structures.
 ---
 
