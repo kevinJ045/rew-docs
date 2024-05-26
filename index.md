@@ -5,7 +5,6 @@ layout: home
 hero:
   name: "Rew"
   text: "A simple coffeescript runtime"
-  tagline: My great project tagline
   image:
     src: https://raw.githubusercontent.com/kevinJ045/rew/main/assets/logo.png
     alt: logo

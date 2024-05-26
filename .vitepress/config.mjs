@@ -2,11 +2,16 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/rew-docs/",
   title: "Rew",
   description: "A simple coffeescript runtime",
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
+
+	search: {
+    	provider: 'local'
+  	},
+	
+   	nav: [
       { text: 'Home', link: '/' },
       { text: 'Getting Started', link: '/getting-started' }
     ],

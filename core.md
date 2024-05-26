@@ -1,7 +1,7 @@
 # Rew Core
 Rew comes with a standard library of some functions.
 
-### `struct`
+## `struct`
 A simple structure manager.
 ```coffee
 file = struct name: '', content: '', length: 0
@@ -11,7 +11,7 @@ myTextFile = file name: 'myfile'
 print myTextFile
 ```
 
-### `future`
+## `future`
 A simple promise manager.
 ```coffee
 longTask = future (resolve, reject) -> ### long task here ###
@@ -25,7 +25,7 @@ otherTask = await future.wait() # To await
 longTask.resolve "customData"
 ```
 
-### `emitter`
+## `emitter`
 A simple event target.
 ```coffee
 target = emitter()
@@ -35,7 +35,7 @@ tatget.emit 'something', 'Data'
 target.on ['something', 'anotherthing'], (data) -> ...
 ```
 
-### `sleep`
+## `sleep`
 A simple waiter for the parent thread.
 ```coffee
 print 'Waiting...'
@@ -43,7 +43,7 @@ await sleep 1000
 print 'Done!'
 ```
 
-### `match`
+## `match`
 A simple switch statement.
 ```coffee
 myString = 'Hello!'
@@ -53,7 +53,7 @@ match myString,
   'Hello!': () -> print 'Hey!!'
   'Hi!': () -> print '...hey?'
 ```
-#### `match` with  `struct`
+### `match` with  `struct`
 When using match with values that are not strings, we have to use maps, or arrays mapped like this:
 ```coffee
 myStruct = struct foo: 'bar'
@@ -65,7 +65,7 @@ match myInstance, [
 ]
 ```
 
-#### `match` with `map`
+### `match` with `map`
 ```coffee{5}
 class myClass
 
@@ -74,7 +74,7 @@ myInstance = new myClass
 match myInstance, map myClass, () -> print 'myInstance is a myClass'
 ```
 
-### `map`
+## `map`
 A simple map implementation.
 ```coffee
 myMap = map 'key', 'value', 
@@ -83,7 +83,7 @@ myMap = map 'key', 'value',
 print myMap
 ```
 
-### `imp`
+## `imp`
 A simple `require` implementation only for `rew` modules.
 ```coffee
 { LinkedList } = imp 'data'
@@ -91,7 +91,7 @@ list = new LinkedList
 
 list.add('value')
 ```
-#### importing files
+### importing files
 ```coffee
 myFile = imp './myfile.coffee'
 myJs = imp './myfile.js', type: 'js'
@@ -100,7 +100,7 @@ myYaml = imp './myfile.yaml', type: 'yaml'
 myText = imp './myfile.txt', type: 'text'
 ```
 
-### `exports`
+## `exports`
 A simple export implementation.
 ```coffee
 # You can use module.exports
@@ -110,7 +110,7 @@ module.exports = { myVariable }
 exports { myVariable }
 ```
 
-### `require`
+## `require`
 NodeJS's require
 ```coffee
 fs = require 'fs'
