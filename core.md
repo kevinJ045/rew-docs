@@ -110,6 +110,16 @@ module.exports = { myVariable }
 exports { myVariable }
 ```
 
+## `input`
+Take user input
+```coffee
+name = input 'Your name: '
+print 'Your name is', name
+
+num = int input 'Age: '
+print num, 'years old'
+```
+
 ## `require`
 NodeJS's require
 ```coffee

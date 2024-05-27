@@ -35,7 +35,11 @@ export default defineConfig({
       {
         text: 'API',
         items: [
-          { text: 'Core', link: '/core' }
+          { text: 'Core', link: '/core' },
+          { text: 'Context', link: '/context' },
+          { text: 'Env', link: '/env' },
+          { text: 'Threads', link: '/threads' },
+          { text: 'Files', link: '/fs' }
         ]
       }
     ],
