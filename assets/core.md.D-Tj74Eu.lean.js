@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a4 as t}from"./chunks/framework.CxL7rIy6.js";const o=JSON.parse('{"title":"Rew Core","description":"","frontmatter":{},"headers":[],"relativePath":"core.md","filePath":"core.md"}'),n={name:"core.md"},h=t("",36),e=[h];function l(p,k,r,d,g,F){return a(),i("div",null,e)}const y=s(n,[["render",l]]);export{o as __pageData,y as default};

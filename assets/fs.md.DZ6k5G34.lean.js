@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as e,a4 as a}from"./chunks/framework.C-FnFfGK.js";const u=JSON.parse('{"title":"Module fs","description":"","frontmatter":{},"headers":[],"relativePath":"fs.md","filePath":"fs.md"}'),t={name:"fs.md"},l=a("",6),n=[l];function o(d,h,p,c,r,k){return e(),i("div",null,n)}const m=s(t,[["render",o]]);export{u as __pageData,m as default};
