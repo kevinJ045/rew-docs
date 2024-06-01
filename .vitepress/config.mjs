@@ -29,7 +29,8 @@ export default defineConfig({
         text: 'Modules',
         items: [
           { text: 'App', link: '/app' },
-          { text: 'Runtime', link: '/runtime' }
+          { text: 'Runtime', link: '/runtime' },
+          { text: 'JSX', link: '/jsx' }
         ]
       },
       {
@@ -42,7 +43,8 @@ export default defineConfig({
           { text: 'Env', link: '/env' },
           { text: 'Threads', link: '/threads' },
           { text: 'Files', link: '/fs' },
-          { text: 'Shell', link: '/exec' }
+          { text: 'Shell', link: '/exec' },
+          { text: 'UI', link: '/ui' }
         ]
       }
     ],
