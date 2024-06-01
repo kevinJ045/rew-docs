@@ -37,9 +37,12 @@ export default defineConfig({
         items: [
           { text: 'Core', link: '/core' },
           { text: 'Context', link: '/context' },
+          { text: 'Import-Export', link: '/import-export' },
+          { text: 'Options', link: '/opt' },
           { text: 'Env', link: '/env' },
           { text: 'Threads', link: '/threads' },
-          { text: 'Files', link: '/fs' }
+          { text: 'Files', link: '/fs' },
+          { text: 'Shell', link: '/exec' }
         ]
       }
     ],

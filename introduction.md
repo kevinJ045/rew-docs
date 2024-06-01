@@ -1,4 +1,4 @@
-# <img style="display: inline-block; margin-bottom: -7.5px; margin-right: 5px;" src="./assets/logo.png" alt="Example Image" width="32"> **Rew**
+# <img style="display: inline-block; margin-bottom: -7.5px; margin-right: 5px;" src="./assets/logo.png" alt="Logo" width="32"> **Rew**
 Rew is basically a jit coffeescript runtime, it's simple and... "efficient". it's a project made with
 the goal of potentially maybe reviving coffeescript.
 

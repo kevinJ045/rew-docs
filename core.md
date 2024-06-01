@@ -16,7 +16,7 @@ A simple promise manager.
 ```coffee
 longTask = future (resolve, reject) -> ### long task here ###
   .pipe (data) -> print data # As a promise.then
-  .last (data) -> print data # As a promise.finallt
+  .last (data) -> print data # As a promise.finally
   .catch (data) -> print data # As a promise.catch
 
 otherTask = await future.wait() # To await
