@@ -18,5 +18,8 @@ print myFile # file content
 
 write './myfile.txt', "My content"
 
+# Allow access for everyone
+chmod './myfile.txt', 077 
+
 print 'It Exists' if exists './myfile.txt'
 ```
