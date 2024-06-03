@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as i,a4 as e}from"./chunks/framework.C-FnFfGK.js";const u=JSON.parse('{"title":"Rew app","description":"","frontmatter":{},"headers":[],"relativePath":"app.md","filePath":"app.md"}'),n={name:"app.md"},t=e("",36),p=[t];function l(h,o,r,d,k,c){return i(),s("div",null,p)}const y=a(n,[["render",l]]);export{u as __pageData,y as default};
