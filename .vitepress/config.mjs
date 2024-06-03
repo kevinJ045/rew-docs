@@ -30,6 +30,11 @@ export default defineConfig({
         items: [
           { text: 'App', link: '/app' },
           { text: 'Runtime', link: '/runtime' },
+          { text: 'Conf', link: '/conf' },
+          { text: 'Building', link: '/build' },
+          { text: 'Qrew', link: '/qrew' },
+          { text: 'PacMan', link: '/pacman' },
+          { text: 'Rogue', link: '/rogue' },
           { text: 'JSX', link: '/jsx' }
         ]
       },
@@ -44,7 +49,8 @@ export default defineConfig({
           { text: 'Threads', link: '/threads' },
           { text: 'Files', link: '/fs' },
           { text: 'Shell', link: '/exec' },
-          { text: 'UI', link: '/ui' }
+          { text: 'UI', link: '/ui' },
+          { text: 'Rune', link: '/rune' }
         ]
       }
     ],

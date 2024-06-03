@@ -8,6 +8,15 @@ module:
 	options: {} 
 	# current file path
 	filepath: string
+# App information, only on rew projects
+app?:
+	# App config
+	config:
+		# App package name
+		package: 
+		# ...
+	# App root
+	path: string
 process:
 	# Arguments
 	argv: string[]
