@@ -1,4 +1,7 @@
-# Module `ui`
+# ~~Module `ui`~~
+
+> Removed since 1.2.3
+
 The `ui` module is pretty straight forward, it's used to create and manage **UI**, currently this module
 only works on linux, and still in beta.
 
@@ -64,7 +67,7 @@ print await findElement 'my-id'
 ## Set Style
 ```coffee
 new Text 'Hello!',
-  style:
+  style:coffee{5}
     color: 'red'
 # OR
 new Widget style:
@@ -146,5 +149,5 @@ A custom binary file to run as a communicator and display manager.
 ```
 You can actually build one using the `rew ui-bin` command
 
-## More Info
-You can look at the [rew cpp ui bin c++ code](https://github.com/kevinJ045/rew/blob/main/cpp/ui.cpp) if you want to understand how the `ui` mechanism work, and therefore making your own way to communicate and work with your ui client by making your own `bin`.
+## Notes
+The `ui` module has been removed since `rew@1.2.3`, meaning that it is no longer used and is in progress to be replaced by a better ui module.

@@ -153,3 +153,19 @@ Sort data in a collection or map.
 sortedRecords = myCollection.sort (a, b) -> a.age - b.age
 print sortedRecords
 ```
+
+## Example
+A simple example to setup a database with [secrets](/secrets)
+```coffee
+secrets = imp '@/secrets'
+rune = imp 'rune'
+
+myDB = rune.db 'gameFiles', {}, secrets.DB_ENCRYPTION_KEY
+
+gameSaveData = myDB.map 'GameSave'
+
+gameSaveData.transform ((data) -> 
+  {
+    init: true
+  }), true if not gameSaveData.get 'init'
+```

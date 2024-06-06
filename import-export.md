@@ -86,6 +86,22 @@ fs = inc 'node:fs'
 express = inc 'pkg:express'
 ```
 
+## Importing apps
+You can import installed apps with `imp`.
+```coffee
+appLib = imp 'app.package.name'
+```
+You can import specific files too:
+```coffee
+appLib = imp 'app.package.name/filename.coffee'
+```
+You can also import [entries](/app.html#app-entries):
+```coffee
+appLib = imp 'app.package.name/lib'
+appLibTest = imp 'app.package.name/test'
+```
+> Keep in mind that if the `app.yaml` contains the `private` in it's `manifest`, this will not work as it is a private app.
+
 ## Using js import syntax
 You can also use the normal `js` imports.
 ```coffee
@@ -100,6 +116,10 @@ import { submodule } from "./module"
 import * as bundleModule from "./module"
 # translates to:
 bundleModule = inc './module'
+
+import { submodule } from "./module" assert { type: 'js' }
+# translates to:
+{ submodule } = inc './module', type: 'js'
 ```
 
 ## Exporting

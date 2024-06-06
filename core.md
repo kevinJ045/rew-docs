@@ -126,3 +126,39 @@ NodeJS's require
 fs = require 'fs'
 path = require 'path'
 ```
+
+## `clear`
+Clear the stdout
+```coffee
+print 'This will be cleared'
+clear()
+```
+
+## `scheduleFrame`
+Basically, it's a `requestAnimationFrame` function.
+```coffee
+num = 0
+myFunc = () -> 
+  clear()
+  print num
+  num++
+  scheduleFrame myFunc
+scheduleFrame myFunc
+```
+
+## `wait`
+Makes async functions to sync.
+```coffee{3}
+axios = require 'axios'
+
+json = wait curl, 'https://api.github.com'
+print json # It will return the response 
+```
+For functions declared inside your `rew` context, you can do this:
+```coffee
+myAsyncFunc = () -> 
+  await sleep(1000)
+  'Done'
+
+print myAsyncFunc.wait() # will print Done
+```

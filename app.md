@@ -12,8 +12,10 @@ The app config, `app.yaml`, holds information about you app, like the entry file
 Example:
 ```yaml
 ---
-package: example.package
-entry: main.coffee
+manifest:
+  package: example.package
+exec:
+  entry: main.coffee
 ---
 ```
 
@@ -21,6 +23,25 @@ entry: main.coffee
 When running apps, you can either put the path to the root of the app, or the package name(only if installed).
 ```bash
 rew run .
+```
+
+## App Entries
+Your app has an entry of `main.coffee` by default, and it uses that entry for everything, but you can change that or add other entries
+```yaml
+---
+manifest:
+  package: example.package
+exec:
+  entry: main.coffee
+  test: test.coffee
+  lib: lib/lib.coffee
+---
+```
+
+## Running other entries
+When you run an app, by default the entry name it runs is `exec.entry`. so instead you can add another entry and run it with the `--entry` flag.
+```bash
+rew run . --entry test # It will run exec.test
 ```
 
 ## Installing an app
@@ -41,8 +62,10 @@ In your `app.yaml`, you can put the following data to tell the runner to run `ma
 ```yaml
 # app.yaml
 ---
-package: example.package
-entry: main.qrew
+manifest:
+  package: example.package
+exec:
+  entry: main.qrew
 ---
 ```
 Now when you run your app, you might run into errors saying **main.qrew not found**, so you can use the `--dev` flag to run an app but change the `.qrew` entry file to `.coffee`, here's how:
@@ -67,14 +90,40 @@ More about translating [here](/build.html#translate-to-js)
 You might want to build your code and install for security purposes, so you can put your build options in your `app.yaml` to make it build on install
 ```yaml
 ---
-package: example.package
-entry: main.qrew
+manifest:
+  package: example.package
+exec:
+  entry: main.qrew
 install:
   build:
     file: main.coffee
     remove: true
     # Other build options
 ---
+```
+
+## Requiring other apps
+You can require other apps to install with your app as libraries.
+```yaml
+---
+manifest:
+  package: example.package
+exec:
+  entry: main.qrew
+install:
+  requirements: [
+    '@rewpkgs/my.app.package',
+    'github:username/repo'
+  ]
+---
+```
+And install requirements with:
+```bash
+rew install . --requirements 
+```
+      or
+```bash
+rew install . -r 
 ```
 
 ## Running installed apps

@@ -105,6 +105,16 @@ install:
   file: ./post-install.coffee
 ```
 
+## Requirements Trigger
+To install other apps as requirements, you can use the `install.requirements` trigger, like below:
+```yaml
+install:
+  requirements: [
+    '@rewpkgs/my.app.package',
+    'github:username/repo'
+  ]
+```
+
 ## Uninstalling apps
 When you uninstall apps, you can either uninstall the app and keep it's config(like databases and such) or remove it entirely.
 

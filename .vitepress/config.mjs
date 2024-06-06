@@ -49,8 +49,15 @@ export default defineConfig({
           { text: 'Threads', link: '/threads' },
           { text: 'Files', link: '/fs' },
           { text: 'Shell', link: '/exec' },
-          { text: 'UI', link: '/ui' },
-          { text: 'Rune', link: '/rune' }
+          { text: '<s>UI</s>', link: '/ui' },
+          { text: 'Rune', link: '/rune' },
+          { text: 'Secrets', link: '/secrets' }
+        ]
+      },
+      {
+        text: 'Updates',
+        items: [
+          { text: 'Update Notes', link: '/updates' },
         ]
       }
     ],
