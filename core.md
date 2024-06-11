@@ -134,6 +134,20 @@ print 'This will be cleared'
 clear()
 ```
 
+## `json` and `yaml`
+Parsing json and yaml.
+```coffee
+# Parse JSON
+json '{ "myJson": "input" }'
+# Object to JSON string
+jsons { myObject: 'value' }
+
+# Parse YAML
+yaml 'myProp: value'
+# Object to YAML string
+yamls { myprop: "myValue" }
+```
+
 ## `scheduleFrame`
 Basically, it's a `requestAnimationFrame` function.
 ```coffee

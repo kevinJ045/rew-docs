@@ -1,0 +1,2 @@
+# Other editors
+You can always use the `tsserver` for javascript to help with intellisense, you just have to translate your code into `javascript` first. For now you can use the official coffeescript compiler, but in future updates, with rew's future into adding custom syntax annotations like types and decorators, you might need to use rew's translate feature to translate your code into javascript.

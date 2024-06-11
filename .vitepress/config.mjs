@@ -55,6 +55,15 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Code and Intellisense',
+        link: '/intellisense',
+        items: [
+          { text: 'JSDoc', link: '/jsdoc' },
+          { text: 'VSCode', link: '/vscode' },
+          { text: 'Other Editors', link: '/other-editors' },
+        ]
+      },
+      {
         text: 'Updates',
         items: [
           { text: 'Update Notes', link: '/updates' },

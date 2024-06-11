@@ -131,6 +131,8 @@ When you write your code, you can choose to make some variables public so to exp
 myPrivateVariable = 'this will not be exported'
 
 pub myPublicVariable = 'this will be exported'
+
+pub "default", myDefaultVariable = 'this will be exported as default'
 ```
 
 To import this, simply do:
@@ -176,4 +178,16 @@ If you or example want to export one thing, without it being flagged as default,
 exports myVariable
 # or
 module.exports = myVariable
+```
+
+## Exporting using the `export` alias
+You can export using the es export syntaxes, it's used as an alias for pub.
+```coffee
+## This will be exported under the name myVar
+export myVar = "myValue"
+
+## This will be exported under the name default
+export default class myClass
+  constructor: -> 
+    print 'hi'
 ```
