@@ -1,5 +1,5 @@
 # <img style="display: inline-block; margin-bottom: -7.5px; margin-right: 5px;" src="./assets/logo.png" alt="Logo" width="32"> **Rew**
-Rew is basically a jit coffeescript runtime, it's simple and... "efficient". it's a project made with
+Rew is basically a coffeescript runtime, it's simple and... "efficient". it's a project made with
 the goal of potentially maybe reviving coffeescript.
 
 In our current time, CoffeeScript is used barely or not at all. Many developers have moved on to other languages and frameworks, but there's still something charming about CoffeeScript's syntax and style. Rew aims to bring back some of that charm by making it easier to run and manage CoffeeScript projects.
