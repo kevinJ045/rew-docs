@@ -1,6 +1,8 @@
 # ~~Module `ui`~~
 
-> Removed since 1.2.3
+::: danger Removed since 1.2.3
+The `ui` module has been removed since `rew@1.2.3`, meaning that it is no longer used and is in progress to be replaced by a better ui module.
+:::
 
 The `ui` module is pretty straight forward, it's used to create and manage **UI**, currently this module
 only works on linux, and still in beta.
@@ -148,6 +150,3 @@ A custom binary file to run as a communicator and display manager.
   bin: realpath './myUiBin'
 ```
 You can actually build one using the `rew ui-bin` command
-
-## Notes
-The `ui` module has been removed since `rew@1.2.3`, meaning that it is no longer used and is in progress to be replaced by a better ui module.

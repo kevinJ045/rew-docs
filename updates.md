@@ -1,6 +1,13 @@
 # Lastest Update Notes
-The new `rew` version `1.2.52` has come with a few things to help you with intellisense.
+The new `rew` version `1.2.55` has been updated with support for http servers and web.
 ## Change log
++ Module `web`
++ Module `serve`
++ Clear import cache
+
+## Notes for version `1.2.52`
+The new `rew` version `1.2.52` has come with a few things to help you with intellisense.
+### Change log
 + Creation for Intellisense files
 + Fixes for `rew conf` command
 + Type declarations for `rew` context

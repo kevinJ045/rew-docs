@@ -51,7 +51,9 @@ export default defineConfig({
           { text: 'Shell', link: '/exec' },
           { text: '<s>UI</s>', link: '/ui' },
           { text: 'Rune', link: '/rune' },
-          { text: 'Secrets', link: '/secrets' }
+          { text: 'Secrets', link: '/secrets' },
+          { text: 'Serve', link: '/serve' },
+          { text: 'Web', link: '/web' }
         ]
       },
       {
