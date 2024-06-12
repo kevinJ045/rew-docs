@@ -1,1 +1,0 @@
-import{_ as e,c as a,o,a4 as t}from"./chunks/framework.C-FnFfGK.js";const f=JSON.parse('{"title":"Lastest Update Notes","description":"","frontmatter":{},"headers":[],"relativePath":"updates.md","filePath":"updates.md"}'),s={name:"updates.md"},r=t("",8),n=[r];function i(l,c,d,h,u,p){return o(),a("div",null,n)}const g=e(s,[["render",i]]);export{f as __pageData,g as default};
