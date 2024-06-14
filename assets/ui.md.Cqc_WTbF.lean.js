@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a4 as n}from"./chunks/framework.BlYtP2NB.js";const o=JSON.parse('{"title":"Module ui","description":"","frontmatter":{},"headers":[],"relativePath":"ui.md","filePath":"ui.md"}'),t={name:"ui.md"},h=n("",38),e=[h];function l(p,k,d,r,g,E){return a(),i("div",null,e)}const F=s(t,[["render",l]]);export{o as __pageData,F as default};

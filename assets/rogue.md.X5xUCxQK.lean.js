@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as i,a4 as s}from"./chunks/framework.BlYtP2NB.js";const f=JSON.parse('{"title":"Rogue rew files","description":"","frontmatter":{},"headers":[],"relativePath":"rogue.md","filePath":"rogue.md"}'),t={name:"rogue.md"},r=s("",7),l=[r];function o(n,h,d,u,c,p){return i(),a("div",null,l)}const b=e(t,[["render",o]]);export{f as __pageData,b as default};

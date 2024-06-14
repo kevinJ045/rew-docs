@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as e,a4 as i}from"./chunks/framework.C-FnFfGK.js";const m=JSON.parse('{"title":"JSX In rew","description":"","frontmatter":{},"headers":[],"relativePath":"jsx.md","filePath":"jsx.md"}'),t={name:"jsx.md"},n=i("",8),h=[n];function l(o,r,p,d,c,k){return e(),a("div",null,h)}const u=s(t,[["render",l]]);export{m as __pageData,u as default};
