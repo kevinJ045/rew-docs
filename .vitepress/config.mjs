@@ -6,6 +6,7 @@ export default defineConfig({
   title: "Rew",
   description: "A simple coffeescript runtime",
   head: [['link', { rel: 'icon', href: 'https://raw.githubusercontent.com/kevinJ045/rew-docs/main/assets/logo.png' }]],
+  ignoreDeadLinks: true,
   themeConfig: {
 
 	search: {
