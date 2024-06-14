@@ -57,6 +57,20 @@ export default defineConfig({
         ]
       },
       {
+        text: "Directives",
+        link: '/compiler-directives',
+        items: [
+          { text: 'Using', link: '/using' }
+        ]
+      },
+      {
+        text: "Compilers",
+        items: [
+          { text: 'CoffeeScript', link: '/lang-coffee' },
+          { text: 'Civet', link: '/lang-civet' },
+        ]
+      },
+      {
         text: 'Code and Intellisense',
         link: '/intellisense',
         items: [
