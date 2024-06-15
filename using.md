@@ -34,6 +34,12 @@ There are a few names that enable compiler level options like `JSX` or `TypeScri
         myCreateElementFunction = (elt) -> { elementName: elt }
         using JSX, myCreateElementFunction
         ```
+-   **`DECORATORS`:**
+    -   Enables [Typescript Decorators]() standalone without enabling typescript.
+        **Example**:
+        ```coffee
+        using DECORATORS
+        ```
 -   **`TYPES`:**
     -   Enables Typescript in the current file.
         **Example**:
@@ -41,6 +47,7 @@ There are a few names that enable compiler level options like `JSX` or `TypeScri
         using TYPES
         ```
 Keep in mind, default `using` options are passed without strings.
+
 ## Custom Stuff
 You can define and use your own options with the using directive. These custom options can be used to enable or configure features specific to your application.
 

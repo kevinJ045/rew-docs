@@ -1,5 +1,16 @@
 # Rew Core
-Rew comes with a standard library of some functions.
+Rew comes with a standard library of built in functions, most core functions are functions you would use more frequently.
+
+## `print`
+A simple STDOUT.
+```coffee
+print 'something'
+
+i = 'Bla Bla'
+print "Bla #{i}"
+
+printf "The same line" # prints out without a line break
+```
 
 ## `struct`
 A simple structure manager.

@@ -52,6 +52,12 @@ imp './mymod', as: 'main'
 imp './mymod', as: 'child'
 ```
 
+The `async` assertion, can be used incase you want to load your modules as a promise.
+```coffee
+await imp './mymod', async: true
+```
+
+
 
 ## Getting the import assertions
 To get what have been asserted to this import you can use the `imports.assert`.
