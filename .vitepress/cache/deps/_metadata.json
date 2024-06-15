@@ -1,43 +1,49 @@
 {
-  "hash": "c3f6a133",
+  "hash": "d9e8f119",
   "configHash": "c188465b",
-  "lockfileHash": "3a95ea12",
-  "browserHash": "65215168",
+  "lockfileHash": "e1f788da",
+  "browserHash": "b0dc253f",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "3168b2bc",
+      "fileHash": "fedb0c29",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "2c3b3aae",
+      "fileHash": "4b476656",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "06769557",
+      "fileHash": "38778525",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "6f8b5134",
+      "fileHash": "4eb91410",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "a8708b29",
+      "fileHash": "9f80f456",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "b6228a67",
+      "fileHash": "37675cf0",
+      "needsInterop": false
+    },
+    "vitepress-plugin-comment-with-giscus": {
+      "src": "../../../node_modules/vitepress-plugin-comment-with-giscus/lib/giscus.js",
+      "file": "vitepress-plugin-comment-with-giscus.js",
+      "fileHash": "a175b462",
       "needsInterop": false
     }
   },
@@ -47,6 +53,9 @@
     },
     "chunk-JWA4H7QR": {
       "file": "chunk-JWA4H7QR.js"
+    },
+    "giscus-aTimukGI-JLMKWH2E": {
+      "file": "giscus-aTimukGI-JLMKWH2E.js"
     }
   }
 }
