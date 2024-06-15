@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as e}from"./chunks/framework.DdBjcVaW.js";const u=JSON.parse('{"title":"The using directive","description":"","frontmatter":{},"headers":[],"relativePath":"using.md","filePath":"using.md"}'),n={name:"using.md"},t=e("",14),l=[t];function h(p,o,k,d,r,c){return a(),i("div",null,l)}const E=s(n,[["render",h]]);export{u as __pageData,E as default};

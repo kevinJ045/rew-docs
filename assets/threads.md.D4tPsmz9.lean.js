@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as n}from"./chunks/framework.DdBjcVaW.js";const c=JSON.parse('{"title":"Module threads","description":"","frontmatter":{},"headers":[],"relativePath":"threads.md","filePath":"threads.md"}'),t={name:"threads.md"},h=n("",13),e=[h];function l(p,k,d,r,E,g){return a(),i("div",null,e)}const y=s(t,[["render",l]]);export{c as __pageData,y as default};

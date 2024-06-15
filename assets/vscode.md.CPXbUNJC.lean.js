@@ -1,0 +1,1 @@
+import{_ as e,c as s,o as t,a5 as a}from"./chunks/framework.DdBjcVaW.js";const u=JSON.parse('{"title":"Intellisense on VSCode","description":"","frontmatter":{},"headers":[],"relativePath":"vscode.md","filePath":"vscode.md"}'),i={name:"vscode.md"},n=a("",6),o=[n];function l(c,r,d,p,h,_){return t(),s("div",null,o)}const m=e(i,[["render",l]]);export{u as __pageData,m as default};
