@@ -75,11 +75,20 @@ To change the state in the client, you need to wrap your function to give it acc
 ```coffee
 name = Web::state "John"
 
-changeName = Web::useState [name], (name) ->
+changeName = Web::invokeState [name], (event, name) ->
   name.value = "Jane"
 
 page.add <div onClick={changeName}>{name}</div>
 ```
+To use local variables, you can do:
+```coffee
+localVar = "Jane"
+changeName = Web::invokeState [name, localVar], (eventm name, localVar) ->
+  name.value = localVar
+```
+::: details More
+Remember that only serializable data can be passed here. The `Web::invokeState` function creates a string from a function that will be parsed into a function in the client js. So whatever you pass is gonna be parsed into a string.
+:::
 
 
 ## The `Web` namespace
@@ -124,7 +133,7 @@ router
 
     indices = [1..10]
 
-    changeStates = Web::useState [buttonText, show],
+    changeStates = Web::invokeState [buttonText, show],
       (buttonText, show) ->
         buttonText.value = 'Showing'
         show.value = true
