@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a4 as n}from"./chunks/framework.0GBSWFkj.js";const o=JSON.parse('{"title":"Rew Core","description":"","frontmatter":{},"headers":[],"relativePath":"core.md","filePath":"core.md"}'),t={name:"core.md"},h=n("",56),e=[h];function l(p,k,r,d,c,g){return a(),i("div",null,e)}const y=s(t,[["render",l]]);export{o as __pageData,y as default};
