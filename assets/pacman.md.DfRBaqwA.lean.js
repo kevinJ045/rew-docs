@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as i,a5 as e}from"./chunks/framework.DdBjcVaW.js";const u=JSON.parse('{"title":"Rew Package/App Manager","description":"","frontmatter":{},"headers":[],"relativePath":"pacman.md","filePath":"pacman.md"}'),t={name:"pacman.md"},n=e("",52),l=[n];function p(h,r,o,k,d,c){return i(),a("div",null,l)}const y=s(t,[["render",p]]);export{u as __pageData,y as default};
