@@ -127,3 +127,13 @@ To remove everything:
 ```bash
 rew uninstall example.package --all
 ```
+
+## Rew package manager website
+The [Rew Package Manager website](https://kevinj045.github.io/rewpkgs/) offers tools to search for packages within repositories and provides installation instructions.
+
+You first need to add a repository if it's not in the list and then `sync` to download all the package information, once done you can search for packages.
+
+Explore it here: [Open Rew Package Manager](https://kevinj045.github.io/rewpkgs/)
+
+## Submitting packages
+To submit to `rewpkgs` which is the official rew repository, all you need to do is to fork [the rewpkgs repo](https://github.com/kevinj045/rewpkgs/) and then add your package and the github repository of the package to either the `main.yaml` or any yaml/json file with the [structure shown above](#repo-structure) and submit a pull request.
