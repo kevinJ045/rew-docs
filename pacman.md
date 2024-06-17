@@ -14,6 +14,20 @@ So, if you want, you can put your app in github, and then use the `git` command 
 rew install github:username/repo
 ```
 This will look for the repo and conig it locally in a temporary folder before it installs it.
+### Specific branch
+To select a branch, you can use `@branch-name`.
+```bash
+rew install github:username/repo@branch-name
+```
+### Pinning packages
+To pin a specific commit, you can use `#sha-AAAA`
+```bash
+rew install github:username/repo#ea543e11e34abbb7d0aeafe64ee99f441e282cfa
+```
+If you want to pin a commit with a specific branch:
+```bash
+rew install github:username/repo@branch-name#ea543e11e34abbb7d0aeafe64ee99f441e282cfa
+```
 
 ## Repos
 Repos are basically json/yaml collections of package urls, to make it easy to look for packages and install them too.
