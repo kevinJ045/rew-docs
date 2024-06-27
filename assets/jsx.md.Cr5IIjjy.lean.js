@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as e,a5 as i}from"./chunks/framework.DdBjcVaW.js";const m=JSON.parse('{"title":"JSX In rew","description":"","frontmatter":{},"headers":[],"relativePath":"jsx.md","filePath":"jsx.md"}'),t={name:"jsx.md"},n=i("",13),o=[n];function h(l,p,r,c,d,k){return e(),a("div",null,o)}const u=s(t,[["render",h]]);export{m as __pageData,u as default};

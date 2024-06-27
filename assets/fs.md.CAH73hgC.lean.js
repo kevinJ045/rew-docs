@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as e,a5 as a}from"./chunks/framework.AH7wd-xv.js";const F=JSON.parse('{"title":"Module fs","description":"","frontmatter":{},"headers":[],"relativePath":"fs.md","filePath":"fs.md"}'),t={name:"fs.md"},l=a("",6),n=[l];function h(o,p,d,c,r,k){return e(),i("div",null,n)}const m=s(t,[["render",h]]);export{F as __pageData,m as default};

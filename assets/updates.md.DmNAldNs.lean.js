@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as a,a5 as t}from"./chunks/framework.AH7wd-xv.js";const p=JSON.parse('{"title":"Lastest Update Notes","description":"","frontmatter":{},"headers":[],"relativePath":"updates.md","filePath":"updates.md"}'),r={name:"updates.md"},s=t("",16),i=[s];function l(n,c,d,h,u,f){return a(),o("div",null,i)}const m=e(r,[["render",l]]);export{p as __pageData,m as default};

@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as e}from"./chunks/framework.AH7wd-xv.js";const F=JSON.parse('{"title":"Module secrets","description":"","frontmatter":{},"headers":[],"relativePath":"secrets.md","filePath":"secrets.md"}'),t={name:"secrets.md"},n=e("",17),l=[n];function h(p,r,d,k,o,c){return a(),i("div",null,l)}const u=s(t,[["render",h]]);export{F as __pageData,u as default};
