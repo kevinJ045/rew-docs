@@ -65,3 +65,41 @@ using 'MyOwnStuff', myOption: 'myValue'
 if __using__.MyOwnStuff
   print __using__.MyOwnStuff.myOption # myValue
 ```
+
+## Usage
+`Usage` is a class that is recognized by the directive and can be used to make a trigger for usages.
+```coffee
+myOwnUsage = Usage::create 'myUsage', (params) ->
+  print 'using myUsage with ', params
+
+using myOwnUsage, 'arg1', 'arg2', () -> 'this is a callback'
+```
+
+## Usage namespaces
+There's a helper function for the `using` directive called `namespace`. it lets you run a function in a subcontext of your choice.
+```coffee
+myContext =
+  property: 'value'
+
+globalVariable = 1
+
+using namespace myContext, ->
+  print localVariable, property
+```
+::: info 
+Keep in mind that namespaces will only share global variables and no local variables will be shared with the subcontext.
+:::
+
+## Usage Groups
+A usage group let's you declare arguments to pass for `using`.
+```coffee
+toUse = Usage::group 'name', 'param1', 'param2', ...
+using toUse
+```
+
+## Namespace Groups
+A namespace group is like a usage group except that it only takes two parameters.
+```coffee
+toUse = namespace.group [nameSpaceObject, () -> 'subcontexted function'], { customProperties }
+using namespace toUse
+```

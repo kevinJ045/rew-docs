@@ -1,5 +1,5 @@
 # JSDoc and CoffeeScript
-CoffeeScript has a history of ups and downs when it comes to type annotations, the `coffeescript` maintainers ended up not really making a syntax for type annotations, so just as in `javascript`, we can use `JSDoc` to not only include types but also descriptions and such to out code.
+After switching to civet, we have now an option in rew to use civet types, but the main target remains coffeescript, and since we can't actually declare types in coffeescript, we can use `JSDoc`.
 
 Example:
 ```coffee

@@ -81,6 +81,13 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Packages',
+        items: [
+          { text: 'Pimmy', link: '/packages/pimmy' },
+          { text: 'Forge3D', link: '/packages/forge3d' },
+        ]
+      },
+      {
         text: 'Updates',
         items: [
           { text: 'Update Notes', link: '/updates' },

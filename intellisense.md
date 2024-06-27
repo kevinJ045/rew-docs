@@ -24,6 +24,3 @@ Once you loaded that, it should work if you have a coffeescript LSP plugin that 
 
 ## Rew's Intellisense Option
 By default, when creating a project with rew, it asks you if you want to use intellisense or not, which will create the necessary files by default.
-
-## The future of `Rew` and Intellisense
-So far, coffeescript has been using some crafty ways for type annotations which are the root of any intellisense but none seemed to work well. Type annotations are on [my](https://github.com/kevinj045) mind and i might try some ways to implement types into `rew`.
