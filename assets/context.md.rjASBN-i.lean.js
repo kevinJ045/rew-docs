@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a5 as n}from"./chunks/framework.AH7wd-xv.js";const g=JSON.parse('{"title":"Rew Context","description":"","frontmatter":{},"headers":[],"relativePath":"context.md","filePath":"context.md"}'),t={name:"context.md"},p=n("",3),l=[p];function e(h,k,r,E,d,c){return a(),i("div",null,l)}const y=s(t,[["render",e]]);export{g as __pageData,y as default};

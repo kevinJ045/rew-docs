@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a5 as n}from"./chunks/framework.D0_SGu8s.js";const g=JSON.parse('{"title":"Module env","description":"","frontmatter":{},"headers":[],"relativePath":"env.md","filePath":"env.md"}'),e={name:"env.md"},l=n("",3),h=[l];function t(p,k,E,d,r,o){return a(),i("div",null,h)}const y=s(e,[["render",t]]);export{g as __pageData,y as default};

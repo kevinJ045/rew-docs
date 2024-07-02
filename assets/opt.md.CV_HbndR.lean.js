@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as e,a5 as a}from"./chunks/framework.D0_SGu8s.js";const g=JSON.parse('{"title":"Rew Runtime Options","description":"","frontmatter":{},"headers":[],"relativePath":"opt.md","filePath":"opt.md"}'),t={name:"opt.md"},n=a("",13),o=[n];function h(l,p,r,d,k,c){return e(),i("div",null,o)}const u=s(t,[["render",h]]);export{g as __pageData,u as default};
