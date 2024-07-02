@@ -171,6 +171,14 @@ myFunc = () ->
 scheduleFrame myFunc
 ```
 
+## `getters` and `setters`
+Define getters and setters
+```coffee
+myObj = {}
+getters myObj, prop: () -> 'some-value'
+setters myObj, prop: (val) -> print 'setting to', val
+```
+
 ## `wait`
 Makes async functions to sync.
 ```coffee{3}

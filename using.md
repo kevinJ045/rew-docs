@@ -103,3 +103,11 @@ A namespace group is like a usage group except that it only takes two parameters
 toUse = namespace.group [nameSpaceObject, () -> 'subcontexted function'], { customProperties }
 using namespace toUse
 ```
+
+## Usage Merge
+A lets you merge multiple usages into one.
+```coffee
+toUse = Usage::merge usageOne, usageTwo, usageThree
+using toUse
+```
+> Note that this only works for `Usage` classes

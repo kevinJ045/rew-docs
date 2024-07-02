@@ -85,6 +85,14 @@ export default defineConfig({
         items: [
           { text: 'Pimmy', link: '/packages/pimmy' },
           { text: 'Forge3D', link: '/packages/forge3d' },
+          { text: 'GTK', link: '/packages/gtk' },
+        ]
+      },
+      {
+        text: 'Experiments',
+        link: '/experiments',
+        items: [
+          { text: 'Nodify', link: '/expr/nodify' },
         ]
       },
       {
