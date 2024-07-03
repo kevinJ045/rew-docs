@@ -92,6 +92,7 @@ export default defineConfig({
         text: 'Experiments',
         link: '/experiments',
         items: [
+          { text: 'Phantom Syntax', link: '/expr/phantom' },
           { text: 'Nodify', link: '/expr/nodify' },
         ]
       },

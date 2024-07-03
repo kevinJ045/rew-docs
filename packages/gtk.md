@@ -85,8 +85,13 @@ appLoop: Gtk.MainLoop
 startMain: Function # Start mainloop
 require: Function # gi.require
 
+Registry: {
+  register: Function # To register elements
+}
+
 elements: {} # All registered elements
 Widget: Class # A custom wrapper widget class
+Component: Class # To declare custom elements
 Window: Usage # A usage to create windows
 createClass: Function # depricated
 
@@ -364,6 +369,97 @@ We can set special window props inside of widgets for special use. Like title ba
 ### Available Props:
 -   **`title_bar`**:
     -   Sets the widget as a title bar
+
+## Custom Elements
+You can declare custom elements as either a Component or a registered element.
+
+### Component as function
+```coffee
+CustomEl = (props, ...children) ->
+  <box>
+    {children}
+  </box>
+
+...
+using refine(Window) ->
+  ...
+  <CustomEl>...</CustomEl>
+```
+### Component as a `Component`
+```coffee
+CustomEl = Component 'my-element', (props, ...children) ->
+  <box>
+    {children}
+  </box>
+
+...
+using refine(Window) ->
+  ...
+  <CustomEl>...</CustomEl>
+```
+### Component as an element
+Using the element Registry, you can define the component as an element.
+```coffee
+CustomEl = Component 'my-element', (props, ...children) ->
+  <box>
+    {children}
+  </box>
+Registry.register CustomEl
+...
+using refine(Window) ->
+  ...
+  <my-element>...</my-element>
+```
+### Example
+Let's make two files, and let's make one of the files a place to declare components while the other for actual usage.
+```coffee
+# main.coffee
+using namespace imp('rew.gtk', gtk: '4.0').setup ->
+	imp('./components').start(UI)
+	using JSX, Widget::create
+	using refine(Window) ->
+		myState = @state 'my state value'
+		<box>
+			<my-component orientation='horizontal'>
+				<text>{myState}</text>
+			</my-component>
+		</box>
+```
+Now let's make the `components.coffee`
+```coffee
+# components.coffee
+export start = (UI) ->
+  using namespace UI, ->
+    using JSX, Widget::create
+    El = Component 'my-component', (props, ...children) ->
+      <box orientation={props.orientation}>
+        {children}
+      </box>
+    Registry.register El
+```
+
+## Phantom Syntax
+`rew.gtk` comes with a header file for [Phantom Syntax](/expr/phantom.md).
+```coffee
+using namespace imp('#rew.gtk', gtk: '4.0').setup ->
+  using JSX, Widget::create
+  Component('my-component') comp = (props, ...children) ->
+      <box orientation={props.orientation}>
+        {children}
+      </box>
+  Registry.register comp
+  using refine(Window) ->
+    @state myState = 'my state value'
+    @surge(
+      (val) => val + ' surged'
+    ) mySurge = myState
+    @ref Myref
+    <box useRef={Myref}>
+      <my-component orientation='horizontal'>
+        <text>{mySurge}</text>
+      </my-component>
+    </box>
+```
 
 ## Advanced Example
 In this example, there are complex structures and almost all working and available widgets that have been refactored for `rew.gtk`.

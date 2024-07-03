@@ -5,3 +5,4 @@ If an experiment is released, it will be documented and flagged as an experiment
 
 ## Current experiments
 - [Nodify](./expr/nodify.md)
+- [Phantom Syntax](./expr/phantom.md)

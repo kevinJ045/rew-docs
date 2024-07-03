@@ -1,13 +1,20 @@
 # Lastest Update Notes
-The new `rew` version `1.2.57` has some breaking updates, rew no longer uses the coffeescript compiler, it has been switched to [civet]([civet](https://civet.dev/)). More at [Languages/coffee](/lang-coffee).
+The new `rew` version `1.2.901` comes with a lot of experimental features along with some utility features.
 ## Change log
++ `--strace` option when running files
++ `getters` and `setters` functions
++ fixed `qrew` bugs since `1.2.57`
+
+## Notes for version `1.2.57`
+The new `rew` version `1.2.57` has some breaking updates, rew no longer uses the coffeescript compiler, it has been switched to [civet]([civet](https://civet.dev/)). More at [Languages/coffee](/lang-coffee).
+### Change log
 + [Civet](/lang-civet) Compiler
 + [Compiler Directives](/compiler-directives)
 + [The `using` Directive](/using)
 
 ## Notes for version `1.2.55`
 The new `rew` version `1.2.55` has been updated with support for http servers and web.
-## Change log
+### Change log
 + Module `web`
 + Module `serve`
 
