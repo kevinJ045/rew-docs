@@ -290,6 +290,23 @@ using refine(Window) ->
   </box>
 ```
 
+## Array State
+Handling arrays might be a bit difficult, so the ArrayState class or `@states` function solves most issues with it.
+```coffee
+using refine(Window) ->
+  alphabet = @states [1..10]
+  <box>
+    {
+      alphabet
+        .filter (letter) => letter isnt 'm'
+        .map (letter) => <text>{letter}</text>
+    }
+  </box>
+```
+::: info Notice
+Keep in mind to keep most states in their own component or wrapper element. As they might re-order your widget tree on update.
+:::
+
 ## Window Context Events
 -   **ready**:
     -   The `ready` event fires once the rendering is done. can be used for many usecases such as the below example:
@@ -372,6 +389,46 @@ We can set special window props inside of widgets for special use. Like title ba
 
 ## Custom Elements
 You can declare custom elements as either a Component or a registered element.
+
+### Custom GTK Classes
+You can declare custom wrapper classes.
+```coffee
+using namespace UI, () ->
+  MyClass = Widget::class {
+    gtk: Gtk.[ClassName]
+    # constructor
+    constructor: (widget, options) -> ...
+    # a function to fix creation arguments
+    factorArguments: () -> ...
+    # name for registry
+    name: 'my-el'
+    # A function to run before the creation of the class
+    onCreate: (WidgetClass) ->
+      WidgetClass::MyProp = ...
+      WidgetClass.onProp 'text', () ->
+        @widget.doSomething
+    # this will be a normal method.
+    method: () ->
+      # @widget is the Gtk Widget instance
+      @widget.doSomething()
+  }
+```
+Later on, you can use this custom class as:
+```coffee
+using refine(Window) ->
+  ...
+  <MyClass>...</MyClass>
+```
+Or you can just register it:
+```coffee
+Registry.register MyClass
+# now you can access it with
+new elements['my-el']
+# or use jsx with it
+using refine(Window) ->
+  ...
+  <my-el>...</my-el>
+```
 
 ### Component as function
 ```coffee

@@ -68,12 +68,14 @@ print 'hi' # won't be executed as only comments work
 
 #### Example:
 ```coffee
-# This will also look for myFile.h.coffee
+# This will look for myFile.h.coffee in addition
 myFile = imp '#./myFile.coffee'
+# or
+import myModule from "#./myFile"
 ```
 This way, we are capable of importing modules with the addition of including the headers for this file if exists.
 ::: info Notice
-This only works with `imp` currently, meaning that even with [JS import syntax](/import-export.md#using-js-import-syntax) it doesn't work.
+This only works with both `imp` and `inc`, meaning it will work with [JS import syntax](/import-export.md#using-js-import-syntax).
 :::
 
 ## Presets
@@ -108,6 +110,15 @@ hooks.push({
   index: number,
   value: string
 });
+```
+
+## Aliases
+Aliases are quick ways to replace a token to another.
+```coffee
+#alias ns = namespace
+using ns ...
+#alias bracket = (
+myFunc bracket '') # translates to myFunc ('')
 ```
 
 ## Declarators
