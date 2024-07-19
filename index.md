@@ -5,9 +5,12 @@ layout: home
 hero:
   name: "Rew"
   text: "A simple coffeescript runtime"
+  tagline: "Code beauty is the priority"
   #image:
   #  src: /assets/logo.png
   #  alt: logo
+  code: |
+    sksks
   actions:
     - theme: brand
       text: Introduction
@@ -15,6 +18,9 @@ hero:
     - theme: alt
       text: Getting Started
       link: /getting-started
+    - theme: alt
+      text: Update Notes
+      link: /updates
 
 features:
   - title: 🚀 Runtime Execution

@@ -16,7 +16,7 @@ To run your new project, you can do:
 ```bash
 rew run .
 ```
-> Keep in mind that you have to `cd` to your project root where `node_modules` folder in order to use `require`.
+> Keep in mind that you have to `cd` to your project root where the `node_modules` folder exists in order to use `require`.
 
 ## Custom Setup
 Once you have installed it, you can use it freely with the `rew` command, but i recommend you install

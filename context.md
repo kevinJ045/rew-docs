@@ -17,6 +17,16 @@ app?:
 		# ...
 	# App root
 	path: string
+# Most core funtions
+std:
+	# A usage to use the std namespace for different actions
+	::ns: (name, object)
+	# Defines a name to context.std, context, and context.exports
+	::define: (name, object)
+	# Used with define to define the main function
+	::Main: (function)
+	# Attaches an object's properties to the context
+	::attach: (object)
 process:
 	# Arguments
 	argv: string[]

@@ -14,8 +14,7 @@ export default defineConfig({
   	},
 	
    	nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Getting Started', link: '/getting-started' }
+      { text: 'Home', link: '/' }
     ],
 
     sidebar: [
@@ -78,6 +77,7 @@ export default defineConfig({
           { text: 'JSDoc', link: '/jsdoc' },
           { text: 'VSCode', link: '/vscode' },
           { text: 'Other Editors', link: '/other-editors' },
+          { text: 'Typing', link: '/typing' },
         ]
       },
       {
