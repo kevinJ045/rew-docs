@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as t,a5 as r}from"./chunks/framework.D0_SGu8s.js";const m=JSON.parse('{"title":"Qrew","description":"","frontmatter":{},"headers":[],"relativePath":"qrew.md","filePath":"qrew.md"}'),i={name:"qrew.md"},s=r("",9),n=[s];function o(p,l,d,h,c,u){return t(),a("div",null,n)}const w=e(i,[["render",o]]);export{m as __pageData,w as default};

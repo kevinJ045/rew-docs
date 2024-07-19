@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as i,a6 as e}from"./chunks/framework.DDlc9KOU.js";const u=JSON.parse('{"title":"Rew Package/App Manager","description":"","frontmatter":{},"headers":[],"relativePath":"pacman.md","filePath":"pacman.md"}'),t={name:"pacman.md"},n=e("",66),l=[n];function p(h,r,o,k,d,c){return i(),s("div",null,l)}const y=a(t,[["render",p]]);export{u as __pageData,y as default};

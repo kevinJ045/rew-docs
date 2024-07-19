@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as i,a5 as n}from"./chunks/framework.D0_SGu8s.js";const u=JSON.parse('{"title":"Rew app","description":"","frontmatter":{},"headers":[],"relativePath":"app.md","filePath":"app.md"}'),e={name:"app.md"},t=n("",49),p=[t];function l(h,r,k,d,o,c){return i(),a("div",null,p)}const y=s(e,[["render",l]]);export{u as __pageData,y as default};
