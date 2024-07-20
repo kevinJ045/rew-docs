@@ -30,7 +30,7 @@ longTask = future (resolve, reject) -> ### long task here ###
   .last (data) -> print data # As a promise.finally
   .catch (data) -> print data # As a promise.catch
 
-otherTask = await future.wait() # To await
+otherTask = await longTask.wait() # To await
 
 # to resolve later externally
 longTask.resolve "customData"
@@ -185,7 +185,7 @@ Makes async functions to sync.
 axios = require 'axios'
 
 json = wait curl, 'https://api.github.com'
-print json # It will return the response 
+print json # It will return the response
 ```
 For functions declared inside your `rew` context, you can do this:
 ```coffee
@@ -194,4 +194,10 @@ myAsyncFunc = () ->
   'Done'
 
 print myAsyncFunc.wait() # will print Done
+```
+using the `-wait` [directive](/compiler-directives.html), you can remove the use of commas.
+```coffee{1}
+-wait curl 'https://api.github.com'
+# Which will translate to
+wait curl, 'https://api.github.com'
 ```
