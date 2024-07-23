@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a6 as n}from"./chunks/framework.DDlc9KOU.js";const c=JSON.parse('{"title":"Module web","description":"","frontmatter":{},"headers":[],"relativePath":"web.md","filePath":"web.md"}'),t={name:"web.md"},e=n("",26),h=[e];function l(p,k,d,r,g,o){return a(),i("div",null,h)}const y=s(t,[["render",l]]);export{c as __pageData,y as default};
