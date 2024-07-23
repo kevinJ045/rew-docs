@@ -34,8 +34,42 @@ The `Web::Page` class is a node containing all the data for the page as well as 
     -   Add a css style string to the head or a link tag to a css
         **Example**:
         ```coffee
-        page.style """ body { back } """
+        page.style """ body { background: black } """
         page.style href: "https://example.com/path/to/style.css"
+        page.style body: background: 'black'
+        # Style has quite the functionality too
+        page.style {
+          '@variables': {
+            blackColor: 'black'
+          }
+          '@mixin whiteSheet(color)': {
+            background: 'wheat',
+            color: '$color'
+          },
+          'body': {
+            background: '$blackColor'
+            width: {
+              default: '100%',
+              '@media screen and (min-width: 700px)': '70%'
+            }
+
+            '& .button': {
+              background: {
+                default: '#09D0D0',
+                ':hover': '#ffffff'
+              },
+              color: {
+                default: '#ffffff',
+                ':hover': '#09D0D0'
+              },
+              '--var-text-color': '@v prop_color'
+            }
+
+            '& > .sheet': {
+              '@include': 'whiteSheet(#000000)'
+            }
+          }
+        }
         ```
 -   **`script`:**
     -   Add a script js to the body
@@ -83,7 +117,7 @@ page.add <div onClick={changeName}>{name}</div>
 To use local variables, you can do:
 ```coffee
 localVar = "Jane"
-changeName = Web::invokeState [name, localVar], (eventm name, localVar) ->
+changeName = Web::invokeState [name, localVar], (event, name, localVar) ->
   name.value = localVar
 ```
 ::: details More
@@ -134,7 +168,7 @@ router
     indices = [1..10]
 
     changeStates = Web::invokeState [buttonText, show],
-      (buttonText, show) ->
+      (event, buttonText, show) ->
         buttonText.value = 'Showing'
         show.value = true
 

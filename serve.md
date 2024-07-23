@@ -108,7 +108,7 @@ File routers defined in the `serve` module are designed to handle different type
 
 If a file named `route.coffee` or `route.js` exists in the specified path (`path`), the file router will import it. This file is expected to contain route handlers or middleware logic that defines how incoming requests to specific routes should be processed and responded to.
     
--    ```coffee
+-   ```coffee
     export GET = -> 
       Svr::text 'This will be returned on get`
     ``` 
@@ -122,7 +122,6 @@ When a file named `page.coffee`, `page.js`, or `page.jsx` exists in the specifie
 -   **Usage of `render()` Function**: The `render()` function is called during this process. It's responsible for generating the HTML content of the page. Here's a typical pattern of how `render()` might be used:
     
     ```coffee
-
     export render -> 
       div = document.createElement 'div'
       div.innerText = 'Hello'
