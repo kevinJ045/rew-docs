@@ -86,6 +86,7 @@ export default defineConfig({
           { text: 'Pimmy', link: '/packages/pimmy' },
           { text: 'Forge3D', link: '/packages/forge3d' },
           { text: 'GTK', link: '/packages/gtk' },
+          { text: 'Rayous', link: '/packages/rayous' },
         ]
       },
       {

@@ -128,6 +128,41 @@ import { submodule } from "./module" assert { type: 'js' }
 { submodule } = inc './module', type: 'js'
 ```
 
+## Multi-import
+Instead of doing repetitive `import`s, you can just use this:
+```coffee
+import (
+  "one"
+  "two"
+  "three"
+  "four"
+) as (
+  one
+  @two
+  { three }
+)
+# translates to:
+import one from "one"
+import * as two from "two"
+import { three } from "three"
+import "four"
+```
+You can do clean `import` like:
+```coffee
+import (
+  "one"
+  "./two"
+  "three"
+)
+# translates to:
+import "one"
+import "./two"
+import "three"
+```
+::: info Notice
+Keep in mind that when you use `as` it will use indexes to look for the nomination of the module.
+:::
+
 ## Exporting
 Exporting in `rew` is different, you can export in many different ways.
 
@@ -151,6 +186,9 @@ something like this instead:
 ```coffee
 pub 'myPublicVariable', myPublicVariable = 'this will be exported'
 ```
+::: info Notice
+`imp` can also be used anywhere in the script, even inside of functions while `export` only works outside of functions.
+:::
 
 ## Exporting other than variables
 To export freely, you can use the `exports` builtin function.
