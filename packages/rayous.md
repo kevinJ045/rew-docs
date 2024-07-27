@@ -68,7 +68,7 @@ As you would have guessed, not all **Rayous** features are supported inside of `
 
 ## Features Replaced by Rew
 Some features are replaced by rew's `serve` module. like:
--   [Build Props](https://kevinj045.github.io/guilib/page/Component/#buildprops) replaced by [`Serve.props`](http://localhost:5173/rew-docs/serve.html#props-structure)
+-   [Build Props](https://kevinj045.github.io/guilib/page/Component/#buildprops) replaced by [`Serve.props`](/serve.html#props-structure)
 
 ## Example App
 In [the repo](https://github.com/kevinJ045/rew.rayous/) there is a file named `test.coffee` and `test-app` folder, you can explore those to see more about how `rew.rayous` works.
