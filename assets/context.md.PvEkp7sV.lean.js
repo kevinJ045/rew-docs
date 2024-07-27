@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a6 as n}from"./chunks/framework.DEI_QcrF.js";const g=JSON.parse('{"title":"Rew Context","description":"","frontmatter":{},"headers":[],"relativePath":"context.md","filePath":"context.md"}'),t={name:"context.md"},p=n("",3),e=[p];function l(h,k,r,E,d,c){return a(),i("div",null,e)}const y=s(t,[["render",l]]);export{g as __pageData,y as default};

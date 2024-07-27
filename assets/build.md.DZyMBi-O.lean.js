@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as e,a6 as s}from"./chunks/framework.DDlc9KOU.js";const g=JSON.parse('{"title":"Building","description":"","frontmatter":{},"headers":[],"relativePath":"build.md","filePath":"build.md"}'),t={name:"build.md"},l=s("",15),n=[l];function h(o,d,r,p,c,u){return e(),a("div",null,n)}const b=i(t,[["render",h]]);export{g as __pageData,b as default};

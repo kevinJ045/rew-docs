@@ -1,1 +1,0 @@
-import{_ as e,c as t,o,a6 as a}from"./chunks/framework.DDlc9KOU.js";const m=JSON.parse('{"title":"Typing you modules","description":"","frontmatter":{},"headers":[],"relativePath":"typing.md","filePath":"typing.md"}'),s={name:"typing.md"},i=a("",5),n=[i];function p(d,c,l,r,y,h){return o(),t("div",null,n)}const _=e(s,[["render",p]]);export{m as __pageData,_ as default};

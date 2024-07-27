@@ -1,0 +1,1 @@
+import{_ as e,c as s,o as a,a6 as i}from"./chunks/framework.DEI_QcrF.js";const u=JSON.parse('{"title":"Module shell","description":"","frontmatter":{},"headers":[],"relativePath":"exec.md","filePath":"exec.md"}'),t={name:"exec.md"},l=i("",3),n=[l];function o(h,c,d,p,r,k){return a(),s("div",null,n)}const g=e(t,[["render",o]]);export{u as __pageData,g as default};

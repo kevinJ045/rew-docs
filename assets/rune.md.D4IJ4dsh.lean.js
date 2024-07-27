@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a6 as e}from"./chunks/framework.DDlc9KOU.js";const E=JSON.parse('{"title":"Module rune","description":"","frontmatter":{},"headers":[],"relativePath":"rune.md","filePath":"rune.md"}'),t={name:"rune.md"},n=e("",60),l=[n];function h(p,k,d,r,o,c){return a(),i("div",null,l)}const y=s(t,[["render",h]]);export{E as __pageData,y as default};

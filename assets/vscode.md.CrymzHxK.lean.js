@@ -1,0 +1,1 @@
+import{_ as e,c as s,o as t,a6 as i}from"./chunks/framework.DEI_QcrF.js";const v=JSON.parse('{"title":"Intellisense on VSCode","description":"","frontmatter":{},"headers":[],"relativePath":"vscode.md","filePath":"vscode.md"}'),n={name:"vscode.md"},a=i("",8),o=[a];function l(r,c,h,d,p,f){return t(),s("div",null,o)}const u=e(n,[["render",l]]);export{v as __pageData,u as default};
