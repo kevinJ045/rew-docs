@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a6 as n}from"./chunks/framework.DEI_QcrF.js";const E=JSON.parse('{"title":"STDLIB","description":"","frontmatter":{},"headers":[],"relativePath":"stdlib.md","filePath":"stdlib.md"}'),e={name:"stdlib.md"},t=n("",9),h=[t];function l(p,k,d,o,r,c){return a(),i("div",null,h)}const y=s(e,[["render",l]]);export{E as __pageData,y as default};
