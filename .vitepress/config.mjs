@@ -42,6 +42,7 @@ export default defineConfig({
         text: 'API',
         items: [
           { text: 'Core', link: '/core' },
+          { text: 'STDLIB', link: '/stdlib' },
           { text: 'Context', link: '/context' },
           { text: 'Import-Export', link: '/import-export' },
           { text: 'Options', link: '/opt' },
