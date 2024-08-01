@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a6 as n}from"./chunks/framework.DEI_QcrF.js";const F=JSON.parse('{"title":"Module web","description":"","frontmatter":{},"headers":[],"relativePath":"web.md","filePath":"web.md"}'),t={name:"web.md"},h=n("",26),l=[h];function e(p,k,d,r,g,E){return a(),i("div",null,l)}const c=s(t,[["render",e]]);export{F as __pageData,c as default};

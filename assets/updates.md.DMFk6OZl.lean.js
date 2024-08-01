@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as a,a6 as t}from"./chunks/framework.MkVtTltr.js";const p=JSON.parse('{"title":"Lastest Update Notes","description":"","frontmatter":{},"headers":[],"relativePath":"updates.md","filePath":"updates.md"}'),r={name:"updates.md"},i=t("",24),s=[i];function n(l,c,d,h,u,f){return a(),o("div",null,s)}const m=e(r,[["render",n]]);export{p as __pageData,m as default};

@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a6 as e}from"./chunks/framework.DEI_QcrF.js";const u=JSON.parse('{"title":"The using directive","description":"","frontmatter":{},"headers":[],"relativePath":"using.md","filePath":"using.md"}'),n={name:"using.md"},t=e("",31),l=[t];function h(p,k,o,r,d,c){return a(),i("div",null,l)}const E=s(n,[["render",h]]);export{u as __pageData,E as default};

@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as e,a6 as a}from"./chunks/framework.MkVtTltr.js";const u=JSON.parse('{"title":"Module serve","description":"","frontmatter":{},"headers":[],"relativePath":"serve.md","filePath":"serve.md"}'),t={name:"serve.md"},n=a("",109),l=[n];function h(r,p,o,d,k,c){return e(),i("div",null,l)}const E=s(t,[["render",h]]);export{u as __pageData,E as default};
