@@ -95,7 +95,7 @@ export default {
 
             cn('Using', 1, ['directives'], '#eba0ac', './using.html'),
             cn('Namespaces', 1, ['using'], '#f5e0dc', './using.html#usage-namespaces'),
-            cn('Import/Export', 1, ['compiler'], './import-export.html'),
+            cn('Import/Export', 1, ['compiler'], '#eba0ac', './import-export.html'),
             cn('Phantom', 1, ['directives'], '#b4befe', './expr/phantom.html'),
 
             cn('Headers', 1, ['phantom'], '#89dceb', './expr/phantom.html#header-coffee-files'),
