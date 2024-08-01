@@ -6,11 +6,9 @@ hero:
   name: "Rew"
   text: "A simple coffeescript runtime"
   tagline: "Code beauty is the priority"
-  #image:
-  #  src: /assets/logo.png
-  #  alt: logo
-  code: |
-    sksks
+  image:
+    src: /assets/logo.png
+    alt: logo
   actions:
     - theme: brand
       text: Introduction
@@ -30,4 +28,3 @@ features:
   - title: 📦 Project Creation and Management
     details: Rew includes commands to easily create new CoffeeScript projects and manage their configurations, simplifying the setup process and helping you maintain organized project structures.
 ---
-
