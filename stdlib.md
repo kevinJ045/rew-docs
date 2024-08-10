@@ -34,7 +34,7 @@ The `std` namespace comes with a few functions that aren't in the global scope, 
     -   STDIN or a nodejs `process.stdin` with sub functions.
         **read**:
         ```coffee
-        std::out.read 'this is an', 'input'
+        std::in.read 'this is an', 'input'
         ```
 -   **`std::attach`:**
     -   Attaches/injects an object into the global context.
