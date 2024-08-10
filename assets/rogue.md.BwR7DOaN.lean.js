@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as i,a6 as s}from"./chunks/framework.MkVtTltr.js";const k=JSON.parse('{"title":"Rogue rew files","description":"","frontmatter":{},"headers":[],"relativePath":"rogue.md","filePath":"rogue.md"}'),t={name:"rogue.md"},n=s("",10),l=[n];function o(r,h,p,c,d,u){return i(),a("div",null,l)}const f=e(t,[["render",o]]);export{k as __pageData,f as default};
