@@ -16,6 +16,26 @@ The `std` namespace comes with a few functions that aren't in the global scope, 
         std::define 'something', 'value'
         print something # value
         ```
+-   **`std::out`:**
+    -   STDOUT or a nodejs `process.stdout` with sub functions.
+        **put**:
+        ```coffee
+        std::out.put 'this is a', 'print'
+        ```
+        **write**:
+        ```coffee
+        std::out.write 'takes only one argument'
+        ```
+        **strace**:
+        ```coffee
+        std::out.strace 'Only will putput', 'on strace mode'
+        ```
+-   **`std::in`:**
+    -   STDIN or a nodejs `process.stdin` with sub functions.
+        **read**:
+        ```coffee
+        std::out.read 'this is an', 'input'
+        ```
 -   **`std::attach`:**
     -   Attaches/injects an object into the global context.
         **Example**:
@@ -74,8 +94,6 @@ The `std` namespace comes with a few functions that aren't in the global scope, 
             @print @myImport, @name
         ```
         > Note: The parameter passed into `@prepare` is only the function `merge`, used to inject objects into the class, meaning they will be accessible in every other function with `this.[name]` or `@[name]`.
-        
-
 -   **`std::ns`:**
     -   Gives you the `std` namespace with all the `std` specific functions, as well as the global context. Can only be used with [`using`](/using) [`namespace`](/using#usage-namespaces).
         **Example**:
@@ -87,3 +105,19 @@ The `std` namespace comes with a few functions that aren't in the global scope, 
             @main: (argv) ->
               attach { argv }
         ```
+-   **`std::__`:**
+    -   A special `getter` that gets all the files with their corresponding `package` or `filename` from `approot/_` or `approot/(config.assets.globals)`.
+        This introduces a new concept, where you can create files in the global folder which is either `approot/_` or any folder you put at `assets.globals` in your [config](/app.html#app-config), and it will load it either with the filename or the package of the file.
+        **Example**:
+        Put this in `main.coffee`:
+        ```coffee
+        std::__::hello_world()
+        ```
+        Put this in `approot/_/hello.coffee`:
+        ```coffee
+        package 'hello_world' # or appPackage 'hello_world'
+
+        export default hello ->
+          print 'Hello, World!'
+        ```
+        Then run `main.coffee`. It should say "Hello, World!".

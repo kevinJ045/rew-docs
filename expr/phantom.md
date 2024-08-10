@@ -162,6 +162,25 @@ Which translates to:
 myInstance = createMyClass('my value', 'some value')
 ```
 
+## Constructor Declarators
+You can make classes into declarators and force it to add a `new` on translation, like:
+```coffee
+#declare* key "=MyClass!" = MyClass;
+```
+Now this:
+```coffee
+MyClass instance = 'some-arg'
+```
+Will be translated to:
+```coffee
+instance = new MyClass('some-arg')
+```
+You can also use it as a definition declarator with:
+```coffee
+#declare* key "=MyClass!*" = MyClass;
+```
+> Remember to use the `*` at last. The order is important.
+
 ## Known Problems
 - Spaces are required during declaration when using a declarator
 - Strings don't work well with declare

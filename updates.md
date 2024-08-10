@@ -1,6 +1,14 @@
 # Lastest Update Notes
-The new `rew` version `1.2.97` comes with the `std` namespace for more beautiful code.
+The new `rew` version `1.4.0` comes with `std::out` and `std::in` for STDOUT and STDIN.
 ## Change log
++ `std::out` for output
++ `std::in` for inputs
++ Constructor Declarators in phantom syntax
++ Mini fixes
+
+## Notes for version `1.2.97`
+The `rew` version `1.2.97` comes with the `std` namespace for more beautiful code.
+### Change log
 + `std` in the runtime context
 + `std::ns` and more functions
 + `import and package` keywords have been fixed
