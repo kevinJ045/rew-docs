@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as e,a6 as a}from"./chunks/framework.CelMbTcp.js";const m=JSON.parse('{"title":"Module fs","description":"","frontmatter":{},"headers":[],"relativePath":"fs.md","filePath":"fs.md"}'),t={name:"fs.md"},l=a("",8),n=[l];function h(o,d,p,r,c,k){return e(),i("div",null,n)}const u=s(t,[["render",h]]);export{m as __pageData,u as default};

@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a6 as n}from"./chunks/framework.CelMbTcp.js";const F=JSON.parse('{"title":"Rew Core","description":"","frontmatter":{},"headers":[],"relativePath":"core.md","filePath":"core.md"}'),t={name:"core.md"},h=n("",61),e=[h];function l(p,k,r,d,g,c){return a(),i("div",null,e)}const y=s(t,[["render",l]]);export{F as __pageData,y as default};
