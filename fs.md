@@ -11,6 +11,13 @@ Rew comes with the node's `fs` module by default, you don't need to import this 
 + `mkdir`: Creates Directories
 + `ls`: Lists Directories
 
+## Helpers
++ `basename(string, suffix)`: Gives the path's basename
++ `dirname`: Gives the dirname of the given path
++ `extname`: Gives the file extension of the given path
++ `pjoin`: Joins given paths
++ `presolve`: Resolves given paths
+
 ## Examples
 ```coffee
 myFile = read './myfile.txt'

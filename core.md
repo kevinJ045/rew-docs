@@ -29,11 +29,25 @@ longTask = future (resolve, reject) -> ### long task here ###
   .pipe (data) -> print data # As a promise.then
   .last (data) -> print data # As a promise.finally
   .catch (data) -> print data # As a promise.catch
+  .sync() # synchronizes the promise without awaiting
+  .sync (promise) -> promise.then (result) -> result + 'something'
+  # synchronizes the promise and gives you the promise to play around with
 
 otherTask = await longTask.wait() # To await
 
 # to resolve later externally
 longTask.resolve "customData"
+```
+
+## `curl`
+A simple `fetch` replacement. Returns a future.
+```coffee
+response = wait curl 'http://example.com'
+print wait response.text() # Response.text() => string
+
+curl url: 'http://example.com/text', text: true # auto string
+curl url: 'http://example.com/json', json: true # auto json
+curl url: 'http://example.com/file', o: realpath './some.file' # Outputs the response buffer to the path
 ```
 
 ## `emitter`
@@ -200,4 +214,9 @@ using the `-wait` [directive](/compiler-directives.html), you can remove the use
 -wait curl 'https://api.github.com'
 # Which will translate to
 wait curl, 'https://api.github.com'
+```
+Can also be used with futures or promises:
+```coffee
+wait new Promise (r) -> r someResult
+wait future (r) -> r someResult
 ```
