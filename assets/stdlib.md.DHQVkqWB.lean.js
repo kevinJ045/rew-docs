@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a6 as e}from"./chunks/framework.CelMbTcp.js";const E=JSON.parse('{"title":"STDLIB","description":"","frontmatter":{},"headers":[],"relativePath":"stdlib.md","filePath":"stdlib.md"}'),t={name:"stdlib.md"},n=e("",9),l=[n];function h(p,k,d,o,c,r){return a(),i("div",null,l)}const y=s(t,[["render",h]]);export{E as __pageData,y as default};

@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as s,a6 as i}from"./chunks/framework.CelMbTcp.js";const g=JSON.parse('{"title":"Runtime","description":"","frontmatter":{},"headers":[],"relativePath":"runtime.md","filePath":"runtime.md"}'),t={name:"runtime.md"},n=i("",8),l=[n];function h(p,o,r,c,d,k){return s(),a("div",null,l)}const b=e(t,[["render",h]]);export{g as __pageData,b as default};
