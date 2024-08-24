@@ -36,12 +36,49 @@ The `std` namespace comes with a few functions that aren't in the global scope, 
         ```coffee
         std::in.read 'this is an', 'input'
         ```
--   **`std::attach`:**
-    -   Attaches/injects an object into the global context.
+-   **`std::named`:**
+    -   Wrap a result with a function to make definitions and attachments better
         **Example**:
         ```coffee
-        std::attach something: 'value'
-        print something # value
+        std::attach std::named('the_name') 'the data'
+        print global.the_name # Prints 'the data'
+        ```
+-   **`std::attach`:**
+    -   Attaches/injects an object into the global context and will be shared across files and all contexts.
+        **Example**:
+        ```coffee
+        std::attach 'name', { object: 'anything' }
+        
+        # Will be attached with the name 'Something'
+        std::attach class Something
+
+        std::attach std::named('something') { someobject: 'someValue' }
+        std::attach std::named('some_function') -> 'some function return'
+
+        # Getting it
+        print global.something
+        ```
+-   **`std::detach`:**
+    -   Removes an attached variable from all contexts.
+        **Example**:
+        ```coffee
+        std::attach 'something', { object: 'anything' }
+        
+        print global.something # Will print
+
+        std::detach global.something
+        # You can also use it's name
+        std::detach 'something'
+
+        print global.something # Will be undefined
+        ```
+-   **`std::signal`:**
+    -   A global emitter connecting all contexts, when an event is fired it is emitted globally and every context can listen to it.
+        **Example**:
+        ```coffee
+        std::signal.on 'event', (...data) -> print data
+
+        std::signal.emit 'event', 'some', 'data'
         ```
 -   **`std::Main`:**
     -   Can only be used with `std::define`, can be used to define the main function/class that will run on execution.
