@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a6 as t}from"./chunks/framework.vnKNdGnN.js";const E=JSON.parse('{"title":"STDLIB","description":"","frontmatter":{},"headers":[],"relativePath":"stdlib.md","filePath":"stdlib.md"}'),n={name:"stdlib.md"},e=t("",9),h=[e];function l(p,k,d,o,r,c){return a(),i("div",null,h)}const y=s(n,[["render",l]]);export{E as __pageData,y as default};

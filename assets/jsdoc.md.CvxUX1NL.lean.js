@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as i,a6 as e}from"./chunks/framework.vnKNdGnN.js";const _=JSON.parse('{"title":"JSDoc and CoffeeScript","description":"","frontmatter":{},"headers":[],"relativePath":"jsdoc.md","filePath":"jsdoc.md"}'),t={name:"jsdoc.md"},n=e("",4),p=[n];function c(o,h,r,l,d,k){return i(),a("div",null,p)}const g=s(t,[["render",c]]);export{_ as __pageData,g as default};
