@@ -29,6 +29,27 @@ If you want to pin a commit with a specific branch:
 rew install github:username/repo@branch-name#ea543e11e34abbb7d0aeafe64ee99f441e282cfa
 ```
 
+## Install from a compressed file
+If you don't want your code to hang around github and be cloned everywhere, you can build your code into a zip file, or any other compressed format, and put it anywhere on the internet. Once you do that, you can do this:
+```bash
+rew install "file+unzip:https://example.com/example.zip"
+```
+
+### Using compression formats
+Once you have compressed your file, to `zip`, `tar`, `rar`, etc... You can just put the full extraction command as such
+```bash
+rew install "file+tar(tar -xf \$file -C \$path):https://example.com/example.tar"
+```
+::: details What are `$file` and `$path`?
+`$file` and `$path` are variables you can use to extract the downloaded file. `$file` is the archived file and `$path` the the path where the file will be extracted.
+:::
+
+### File integrity with SHA256 Checksum
+You can `sha256sum` your file after it's downloaded to verify it's integrity, by adding a `sha` tag to the syntax like such:
+```bash
+rew install "file+sha(YOUR-SHA)+tar(tar -xf \$file -C \$path):https://example.com/example.tar"
+```
+
 ## Repos
 Repos are basically json/yaml collections of package urls, to make it easy to look for packages and install them too.
 
@@ -74,6 +95,7 @@ If you want to create your own repo, you can use either a json or a yaml format,
 name: Repo Name
 packages:
   example.name: github:myUserName/MyRewApp 
+  another.example: file+unzip:https://example.com/example.zip 
 ---
 ```
 You can also import other files in your repo, just so you can separate between packages.
