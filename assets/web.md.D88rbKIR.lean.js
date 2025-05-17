@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ah as t}from"./chunks/framework.CS-HvYag.js";const E=JSON.parse('{"title":"Module web","description":"","frontmatter":{},"headers":[],"relativePath":"web.md","filePath":"web.md"}'),h={name:"web.md"};function l(e,s,p,k,d,r){return n(),a("div",null,s[0]||(s[0]=[t("",26)]))}const o=i(h,[["render",l]]);export{E as __pageData,o as default};

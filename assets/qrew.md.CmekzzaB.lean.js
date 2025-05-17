@@ -1,0 +1,1 @@
+import{_ as a,c as t,o as r,ah as i}from"./chunks/framework.CS-HvYag.js";const u=JSON.parse('{"title":"Qrew","description":"","frontmatter":{},"headers":[],"relativePath":"qrew.md","filePath":"qrew.md"}'),n={name:"qrew.md"};function s(o,e,p,l,d,h){return r(),t("div",null,e[0]||(e[0]=[i("",9)]))}const g=a(n,[["render",s]]);export{u as __pageData,g as default};

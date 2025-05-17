@@ -1,0 +1,1 @@
+import{_ as i,c as e,o as a,ah as t}from"./chunks/framework.CS-HvYag.js";const c=JSON.parse('{"title":"Rew Runtime Options","description":"","frontmatter":{},"headers":[],"relativePath":"opt.md","filePath":"opt.md"}'),n={name:"opt.md"};function o(h,s,l,p,r,d){return a(),e("div",null,s[0]||(s[0]=[t("",13)]))}const E=i(n,[["render",o]]);export{c as __pageData,E as default};

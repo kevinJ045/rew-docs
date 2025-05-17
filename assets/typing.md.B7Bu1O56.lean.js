@@ -1,0 +1,1 @@
+import{_ as t,c as a,o,ah as s}from"./chunks/framework.CS-HvYag.js";const u=JSON.parse('{"title":"Typing you modules","description":"","frontmatter":{},"headers":[],"relativePath":"typing.md","filePath":"typing.md"}'),i={name:"typing.md"};function n(p,e,d,l,r,c){return o(),a("div",null,e[0]||(e[0]=[s("",5)]))}const h=t(i,[["render",n]]);export{u as __pageData,h as default};

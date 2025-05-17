@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ah as e}from"./chunks/framework.CS-HvYag.js";const g=JSON.parse('{"title":"Module env","description":"","frontmatter":{},"headers":[],"relativePath":"env.md","filePath":"env.md"}'),l={name:"env.md"};function h(t,s,p,k,E,r){return n(),a("div",null,s[0]||(s[0]=[e("",3)]))}const o=i(l,[["render",h]]);export{g as __pageData,o as default};

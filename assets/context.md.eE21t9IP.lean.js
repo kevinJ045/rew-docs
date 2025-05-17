@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ah as t}from"./chunks/framework.CS-HvYag.js";const c=JSON.parse('{"title":"Rew Context","description":"","frontmatter":{},"headers":[],"relativePath":"context.md","filePath":"context.md"}'),p={name:"context.md"};function e(l,s,h,k,r,E){return n(),a("div",null,s[0]||(s[0]=[t("",3)]))}const g=i(p,[["render",e]]);export{c as __pageData,g as default};

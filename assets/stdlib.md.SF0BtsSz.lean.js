@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,ah as n}from"./chunks/framework.CS-HvYag.js";const c=JSON.parse('{"title":"STDLIB","description":"","frontmatter":{},"headers":[],"relativePath":"stdlib.md","filePath":"stdlib.md"}'),e={name:"stdlib.md"};function h(l,s,p,k,d,o){return t(),a("div",null,s[0]||(s[0]=[n("",9)]))}const g=i(e,[["render",h]]);export{c as __pageData,g as default};

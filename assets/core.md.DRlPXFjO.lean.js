@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ah as t}from"./chunks/framework.CS-HvYag.js";const F=JSON.parse('{"title":"Rew Core","description":"","frontmatter":{},"headers":[],"relativePath":"core.md","filePath":"core.md"}'),h={name:"core.md"};function e(l,s,p,k,r,d){return n(),a("div",null,s[0]||(s[0]=[t("",66)]))}const c=i(h,[["render",e]]);export{F as __pageData,c as default};
