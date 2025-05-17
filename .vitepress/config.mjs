@@ -96,6 +96,7 @@ export default defineConfig({
         items: [
           { text: 'Phantom Syntax', link: '/expr/phantom' },
           { text: 'Nodify', link: '/expr/nodify' },
+          { text: 'Rusty Rew', link: '/expr/rusty' },
         ]
       },
       {
