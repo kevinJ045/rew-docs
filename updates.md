@@ -1,6 +1,12 @@
 # Lastest Update Notes
-The new `rew` version `1.4.0` comes with `std::out` and `std::in` for STDOUT and STDIN.
+With the new `rew` version `1.5.1`, you can [download and extract an archive before installing it automatically](/pacman.html#install-from-a-compressed-file).
 ## Change log
++ [Installable Archives](/pacman.html#install-from-a-compressed-file)
++ Fixed bugs in [`threads`](/threads.html)
+
+## Notes for version `1.4.0`
+The new `rew` version `1.4.0` comes with `std::out` and `std::in` for STDOUT and STDIN.
+### Change log
 + `std::out` for output
 + `std::in` for inputs
 + Constructor Declarators in phantom syntax
