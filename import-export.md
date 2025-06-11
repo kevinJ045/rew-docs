@@ -1,5 +1,5 @@
 # Importing and exporting
-In <code><img style="display: inline-block; margin-bottom: -5.5px; margin-right: 5px;" src="../assets/logo.png" width="18">rew</code>, importing and exporting is... well just intuitive  i guess... Just do as you would in <code><img src="/assets/js.svg" width="12px" style="display: inline" /> javascript</code> except a few differences.
+In <code><img style="display: inline-block; margin-bottom: -5.5px; margin-right: 5px;" src="./assets/logo.png" width="18">rew</code>, importing and exporting is... well just intuitive  i guess... Just do as you would in <code><img src="/assets/js.svg" width="12px" style="display: inline" /> javascript</code> except a few differences.
 
 ## Exporting
 To export, you can use the normal js ways
