@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as i,ah as t}from"./chunks/framework.CS-HvYag.js";const k=JSON.parse('{"title":"JSX In rew","description":"","frontmatter":{},"headers":[],"relativePath":"jsx.md","filePath":"jsx.md"}'),n={name:"jsx.md"};function o(h,s,l,p,r,d){return i(),e("div",null,s[0]||(s[0]=[t("",13)]))}const g=a(n,[["render",o]]);export{k as __pageData,g as default};

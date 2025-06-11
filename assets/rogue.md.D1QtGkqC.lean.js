@@ -1,1 +1,0 @@
-import{_ as a,c as i,o as s,ah as t}from"./chunks/framework.CS-HvYag.js";const u=JSON.parse('{"title":"Rogue rew files","description":"","frontmatter":{},"headers":[],"relativePath":"rogue.md","filePath":"rogue.md"}'),l={name:"rogue.md"};function n(o,e,r,h,p,c){return s(),i("div",null,e[0]||(e[0]=[t("",10)]))}const g=a(l,[["render",n]]);export{u as __pageData,g as default};

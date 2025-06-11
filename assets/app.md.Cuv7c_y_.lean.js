@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as e,ah as n}from"./chunks/framework.BVCN9yfE.js";const c=JSON.parse('{"title":"Rew app","description":"","frontmatter":{},"headers":[],"relativePath":"app.md","filePath":"app.md"}'),p={name:"app.md"};function t(h,a,l,o,r,d){return e(),i("div",null,a[0]||(a[0]=[n("",29)]))}const g=s(p,[["render",t]]);export{c as __pageData,g as default};

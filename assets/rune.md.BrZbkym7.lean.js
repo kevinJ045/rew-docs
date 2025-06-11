@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as e,ah as t}from"./chunks/framework.CS-HvYag.js";const c=JSON.parse('{"title":"Module rune","description":"","frontmatter":{},"headers":[],"relativePath":"rune.md","filePath":"rune.md"}'),n={name:"rune.md"};function l(h,s,p,k,d,r){return e(),a("div",null,s[0]||(s[0]=[t("",60)]))}const g=i(n,[["render",l]]);export{c as __pageData,g as default};

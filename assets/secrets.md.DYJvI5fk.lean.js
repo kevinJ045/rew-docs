@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as e,ah as t}from"./chunks/framework.CS-HvYag.js";const c=JSON.parse('{"title":"Module secrets","description":"","frontmatter":{},"headers":[],"relativePath":"secrets.md","filePath":"secrets.md"}'),n={name:"secrets.md"};function l(h,s,p,r,k,d){return e(),a("div",null,s[0]||(s[0]=[t("",17)]))}const g=i(n,[["render",l]]);export{c as __pageData,g as default};

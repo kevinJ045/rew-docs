@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as n,ah as e}from"./chunks/framework.CS-HvYag.js";const c=JSON.parse('{"title":"Rew Conf","description":"","frontmatter":{},"headers":[],"relativePath":"conf.md","filePath":"conf.md"}'),t={name:"conf.md"};function h(l,s,p,k,o,r){return n(),a("div",null,s[0]||(s[0]=[e("",14)]))}const g=i(t,[["render",h]]);export{c as __pageData,g as default};

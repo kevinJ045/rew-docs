@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as n,ah as t}from"./chunks/framework.CS-HvYag.js";const g=JSON.parse('{"title":"Module threads","description":"","frontmatter":{},"headers":[],"relativePath":"threads.md","filePath":"threads.md"}'),h={name:"threads.md"};function e(l,s,p,k,d,r){return n(),a("div",null,s[0]||(s[0]=[t("",13)]))}const o=i(h,[["render",e]]);export{g as __pageData,o as default};

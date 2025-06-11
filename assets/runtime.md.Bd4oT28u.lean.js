@@ -1,1 +1,0 @@
-import{_ as e,c as s,o as i,ah as t}from"./chunks/framework.CS-HvYag.js";const k=JSON.parse('{"title":"Runtime","description":"","frontmatter":{},"headers":[],"relativePath":"runtime.md","filePath":"runtime.md"}'),n={name:"runtime.md"};function l(h,a,p,r,o,d){return i(),s("div",null,a[0]||(a[0]=[t("",8)]))}const u=e(n,[["render",l]]);export{k as __pageData,u as default};

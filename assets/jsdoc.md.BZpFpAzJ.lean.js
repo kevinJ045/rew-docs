@@ -1,1 +1,0 @@
-import{_ as a,c as i,o as e,ah as t}from"./chunks/framework.CS-HvYag.js";const k=JSON.parse('{"title":"JSDoc and CoffeeScript","description":"","frontmatter":{},"headers":[],"relativePath":"jsdoc.md","filePath":"jsdoc.md"}'),n={name:"jsdoc.md"};function p(c,s,r,l,o,h){return e(),i("div",null,s[0]||(s[0]=[t("",4)]))}const f=a(n,[["render",p]]);export{k as __pageData,f as default};

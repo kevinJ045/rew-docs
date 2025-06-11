@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ah as h}from"./chunks/framework.BVCN9yfE.js";const E=JSON.parse('{"title":"Files","description":"","frontmatter":{},"headers":[],"relativePath":"fs.md","filePath":"fs.md"}'),t={name:"fs.md"};function k(l,s,p,e,r,d){return n(),a("div",null,s[0]||(s[0]=[h("",6)]))}const y=i(t,[["render",k]]);export{E as __pageData,y as default};

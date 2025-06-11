@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as e,ah as n}from"./chunks/framework.CS-HvYag.js";const g=JSON.parse('{"title":"The using directive","description":"","frontmatter":{},"headers":[],"relativePath":"using.md","filePath":"using.md"}'),t={name:"using.md"};function l(h,s,p,k,o,r){return e(),a("div",null,s[0]||(s[0]=[n("",31)]))}const c=i(t,[["render",l]]);export{g as __pageData,c as default};
