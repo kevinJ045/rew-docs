@@ -148,9 +148,9 @@ export default {
     giscusTalk(
       {
         repo: "kevinj045/rew",
-        repoId: "R_kgDOL_wH4Q",
+        repoId: "R_kgDOM_vjsQ",
         category: "General", // default: `General`
-        categoryId: "DIC_kwDOL_wH4c4CgG6I",
+        categoryId: "DIC_kwDOM_vjsc4CrWDR",
         mapping: "pathname", // default: `pathname`
         inputPosition: "bottom", // default: `top`
         lang: "en", // default: `zh-CN`
