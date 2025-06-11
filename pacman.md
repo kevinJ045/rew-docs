@@ -1,175 +1,149 @@
-# Rew Package/App Manager
-**Rew** comes with a default package manager used to install/uninstall apps.
+# Rew's Package Manager
+[Pimmy](https://github.com/kevinj045/rew.pimmy) is a simple package manager made in rew for rew. It does a few things to help you manage your rew apps such as: building, installing and uh- that's it.
 
-## Basic install
-To install an app from a local project clone, you can do this:
+So to use pimmy, you first have to:
 ```bash
-rew install .
+git clone https://kevinj045/rew.pimmy # or download source code
+rew run main.coffee -- -Ab .
+rew run main.coffee -- -Aa .
 ```
-It will ask you for prompt if you want to install it or not.
-
-## Install from [Github](https://github.com)
-So, if you want, you can put your app in github, and then use the `git` command along with the `npm` command to `clone` and `npm i` to setup the project and install it.
-```bash
-rew install github:username/repo
-```
-This will look for the repo and conig it locally in a temporary folder before it installs it.
-### Specific branch
-To select a branch, you can use `@branch-name`.
-```bash
-rew install github:username/repo@branch-name
-```
-### Pinning packages
-To pin a specific commit, you can use `#sha-AAAA`
-```bash
-rew install github:username/repo#ea543e11e34abbb7d0aeafe64ee99f441e282cfa
-```
-If you want to pin a commit with a specific branch:
-```bash
-rew install github:username/repo@branch-name#ea543e11e34abbb7d0aeafe64ee99f441e282cfa
-```
-
-## Install from a compressed file
-If you don't want your code to hang around github and be cloned everywhere, you can build your code into a zip file, or any other compressed format, and put it anywhere on the internet. Once you do that, you can do this:
-```bash
-rew install "file+unzip:https://example.com/example.zip"
-```
-
-### Using compression formats
-Once you have compressed your file, to `zip`, `tar`, `rar`, etc... You can just put the full extraction command as such
-```bash
-rew install "file+tar(tar -xf \$file -C \$path):https://example.com/example.tar"
-```
-::: details What are `$file` and `$path`?
-`$file` and `$path` are variables you can use to extract the downloaded file. `$file` is the archived file and `$path` the the path where the file will be extracted.
+::: details Requirements
+You will need `cargo` so that you can build the crates in pimmy.
 :::
+When that is done, pimmy will tell you to add the rew bin path to your `PATH`. If you want executables to work, you have to pass this step.
 
-### File integrity with SHA256 Checksum
-You can `sha256sum` your file after it's downloaded to verify it's integrity, by adding a `sha` tag to the syntax like such:
+Once that is all done, You can just run pimmy as:
 ```bash
-rew install "file+sha(YOUR-SHA)+tar(tar -xf \$file -C \$path):https://example.com/example.tar"
+pimmy --version
+```
+A simple test to see if pimmy is available and working.
+
+## Pimmy majors
+Pimmy has 5 majors (only two work currently).
+- Repo
+- App
+- Types (upcoming)
+- Caches (upcoming)
+- Artifacts (upcoming)
+Majors are the subjects in which pimmy acts as/on. You'll understand this as we go on.
+
+## Pimmy actions
+There are various actions in pimmy, such as `build`, `add`, `remove`, `bla bla bla`. And each action should be wrapped by a mode so that the action knows what to work with. Actions are also known as **minors**.
+
+For example, let's say you wanna install an app. You just have to do:
+```bash
+pimmy -Aa @rewpkgs/app.package.name
+```
+**Explanation**: The `-A` basically tells it to go to app mode, and the `-a` is short for add. If we extracted this it would be more like:
+```bash
+pimmy --app @rewpkgs/app.package.name --add
+```
+I hope that makes sense.
+
+## Pimmy minors
+So, now that you know all actions, let's see how many actions there are:
+```bash
+-S or --sync   ---- To synchronize the specified object(like app or repo or whatever)
+-a or --add    ---- To add stuff
+-b or --build  ---- To build (only works with apps)
+-c or --cache  ---- To cache an app
+  -- Caching basically copies your app away to a cache entry and
+     builds it there so all the build artifacts and alike won't be
+     in your dev environment.
+-r or --remove ---- To remove stuff
+-l or --list   ---- To list stuff
+-N or --new    ---- New project
 ```
 
-## Repos
-Repos are basically json/yaml collections of package urls, to make it easy to look for packages and install them too.
-
-Rew comes with [this](https://github.com/kevinJ045/rewpkgs/blob/main/main.yaml) repo by default.
-
-## Install from Repo
-To install from a repo, you must first make sure to add the repo to your repo list at your default [conf](/conf.html).
-
-First look at all your repos with:
+## Other minors
+These minors are simply just helpers for actions, like `verbose` and such.
 ```bash
-rew repo view
+-s or --safe     ---- Safe mode, which means no cleanups on builds and alike
+-g or --git      ---- Only for creating new projects, use git or not
+-t or --types    ---- Only for creating new projects, use types or not
+-i or --ignore   ---- Only for creating new projects, do not input
 ```
 
-To add a repo, you can:
+## Examples.
+Here's how you'd normally start pimmy
+### Synchronizing Repositories
 ```bash
-rew repo add repoid https://URL-to-repo-json-or-yaml
+pimmy -SR # synchronizes all the repositories
+pimmy -SR rewpkgs # synchronizes only rewpkgs
 ```
 
-To change a repo url:
+### Installing apps
 ```bash
-rew repo set repoid https://URL-to-repo-json-or-yaml
+pimmy -Aa @rewpkgs/package.name
+pimmy -Aa github:username/mygithubrepo
+pimmy -Aa github:username/mygithubrepo@branch
+pimmy -Aa github:username/mygithubrepo@branch#commit
+pimmy -Aa file+zip+sha(SHA-256-sum)+https://example.com/path/to/file.zip
+pimmy -Aa /path/to/folder
+# all of these are just ways to "ADD" apps
+# to actually add apps 
 ```
 
-To get a repo url:
+### Upgrade/Install apps
 ```bash
-rew repo get repoid
+pimmy -AS @rewpkgs/package.name
 ```
 
-To view all packages in a repo:
+### Remove apps
 ```bash
-rew repo view repoid
+pimmy -Ar package.name
 ```
 
-To delete a repo:
+### Building your current app
 ```bash
-rew repo delete repoid
+pimmy -Ab /path/to/app
 ```
+Keep in mind that this will clean up files and you might not want that, so you can simply do this:
+```bash
+pimmy -Abs /path/to/app # enabled safe mode. no clean ups.
+```
+More about this at [Building](/building).
 
-## Repo structure
-If you want to create your own repo, you can use either a json or a yaml format, and this is it's structure:
+### Others
+More sub-commands are coming soon, to support:
+- Cache management
+- Type management for typescript
+- Artifact management
+- Building methods
+
+## App install hooks
+You can put install hooks for `pimmy` to modify your app on install.
+
+### Build
+This is important and maybe required if you want pimmy to build your app on install. you can add it to your `app.yaml` as such:
 ```yaml
----
-name: Repo Name
-packages:
-  example.name: github:myUserName/MyRewApp 
-  another.example: file+unzip:https://example.com/example.zip 
----
-```
-You can also import other files in your repo, just so you can separate between packages.
-```yaml
----
-name: Repo Name
-include:
-  - https://somesite.io/myrepo.yaml
-  - ./myrepo.yaml
-  - ./something.json
-packages:
-  example.name: github:myUserName/MyRewApp 
----
-```
-
-## Install triggers
-Install triggers are what run after you have installed an app
-
-## Build Install Trigger
-If you have made your app open-source, and you want to probably [build](/build.html) it to [qrew](/qrew.html) for security, you can use the `install.build` trigger in your [app config](/app.html#app-config) like below:
-```yaml
-package: example.package
-entry: main.qrew
 install:
-  build:
-    file: main.coffee
-    remove: true # remove flag to remove source codes on build
+  build: true
 ```
 
-## Command Install Trigger
-If you want to run some custom commands after install, you can use the `install.commands` trigger like below:
+### Bin
+The `bin` option lets you make executables at the rew bin path(which pimmy will tell you) so that you can use them or call them as commands or whatever.
+```yaml
+entries:
+  # you should add this for windows
+  pimmy: pimmy.qrew
+install:
+  ...
+  bin:
+    pimmy: pimmy.qrew
+```
+
+### preinstall and postinstall
+You can add preinstall and postinstall scripts for when your app is installed. Add the like so:
 ```yaml
 install:
-  commands: 
-    # $installPath will be resolved to the root of the app
-    - echo Installed at $installPath
+  ...
+  preinstall:
+    - myscript.coffee
+  postinstall:
+    - myscript.coffee
+  # optional but you can also use
+  cleanup:
+    - myscript.coffee
+    - path/to/dir
 ```
-
-## Run file Trigger
-If you want to run a script in your app after install, you can use the `install.file` trigger, like below:
-```yaml
-install:
-  file: ./post-install.coffee
-```
-
-## Requirements Trigger
-To install other apps as requirements, you can use the `install.requirements` trigger, like below:
-```yaml
-install:
-  requirements: [
-    '@rewpkgs/my.app.package',
-    'github:username/repo'
-  ]
-```
-
-## Uninstalling apps
-When you uninstall apps, you can either uninstall the app and keep it's config(like databases and such) or remove it entirely.
-
-To remove app only:
-```bash
-rew uninstall example.package
-```
-
-To remove everything:
-```bash
-rew uninstall example.package --all
-```
-
-## Rew package manager website
-The [Rew Package Manager website](https://kevinj045.github.io/rewpkgs/) offers tools to search for packages within repositories and provides installation instructions.
-
-You first need to add a repository if it's not in the list and then `sync` to download all the package information, once done you can search for packages.
-
-Explore it here: [Open Rew Package Manager](https://kevinj045.github.io/rewpkgs/)
-
-## Submitting packages
-To submit to `rewpkgs` which is the official rew repository, all you need to do is to fork [the rewpkgs repo](https://github.com/kevinj045/rewpkgs/) and then add your package and the github repository of the package to either the `main.yaml` or any yaml/json file with the [structure shown above](#repo-structure) and submit a pull request.

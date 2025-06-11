@@ -1,222 +1,80 @@
-# Rew Core
-Rew comes with a standard library of built in functions, most core functions are functions you would use more frequently.
+# Core APIs
+Rew core APIs include the following.
 
-## `print`
-A simple STDOUT.
+## `io`
+`rew:io` is a simple io module that has `STDIN`, `STDOUT` and `STDERR`.
+
+**Example**:
 ```coffee
-print 'something'
-
-i = 'Bla Bla'
-print "Bla #{i}"
-
-printf "The same line" # prints out without a line break
+rew::io::out.print "Hello"
 ```
 
-## `struct`
-A simple structure manager.
+**Class Def**:
+```typescript
+io: {
+  out: Stdout extends Writable & {
+    print: (...any[]) => void,
+    printf: (string) => void,
+    err: (error) => void
+  },
+  in: Stdin extends Writable & {
+    input: (string) => string
+  },
+  err: Stderr extends Writable
+}
+```
+
+## `channel`
+`rew::channel` is basically just a fancy `setTimeout` and `setInterval`.
 ```coffee
-file = struct name: '', content: '', length: 0
+rew::channel::new ->
+  if something
+    @stop()
 
-myTextFile = file name: 'myfile'
+interval_time = 1000
+rew::channel::new interval_time, ->
+  if something
+    @stop()
 
-print myTextFile
+t = rew::channel::timeout 1000, ->
+  ...
+
+i = rew::channel::interval 1000, ->
+  ...
+
+rew::channel::timeoutClear t
+rew::channel::intervalClear i
 ```
 
-## `future`
-A simple promise manager.
+
+## `env`
+`rew::env` is how you would manage environment variables. nothing else special about it.
 ```coffee
-longTask = future (resolve, reject) -> ### long task here ###
-  .pipe (data) -> print data # As a promise.then
-  .last (data) -> print data # As a promise.finally
-  .catch (data) -> print data # As a promise.catch
-  .sync() # synchronizes the promise without awaiting
-  .sync (promise) -> promise.then (result) -> result + 'something'
-  # synchronizes the promise and gives you the promise to play around with
+rew::env::get('KEY')
 
-otherTask = await longTask.wait() # To await
+rew::env::set('KEY', 'VALUE')
 
-# to resolve later externally
-longTask.resolve "customData"
+rew::env::has('KEY')
+
+rew::env::keys()
+
+rew::env::env # all env vars
 ```
 
-## `curl`
-A simple `fetch` replacement. Returns a future.
+## `process`
+`rew::process` is exactly what you would expect it to be. Just a manager for the current process.
 ```coffee
-response = wait curl 'http://example.com'
-print wait response.text() # Response.text() => string
-
-curl url: 'http://example.com/text', text: true # auto string
-curl url: 'http://example.com/json', json: true # auto json
-curl url: 'http://example.com/file', o: realpath './some.file' # Outputs the response buffer to the path
+rew::process::pid # PID
+rew::process::ppid # PPID
+rew::process::cwd # current working dir
+rew::process::args # argv
+rew::process::onExit -> {...} # function on exit to prevent exiting or something idk
+rew::process::exit(code) # exit the current process
 ```
 
-## `emitter`
-A simple event target.
+## Others
+Every other std module has to be imported through either `#std.blablabla` or to import all `#std`
 ```coffee
-target = emitter()
-target.on 'something', (data) -> print data
-tatget.emit 'something', 'Data'
-
-target.on ['something', 'anotherthing'], (data) -> ...
-```
-
-## `sleep`
-A simple waiter for the parent thread.
-```coffee
-print 'Waiting...'
-await sleep 1000
-print 'Done!'
-```
-
-## `match`
-A simple switch statement.
-```coffee
-myString = 'Hello!'
-
-match myString,
-  # Matches what the value is calls the match
-  'Hello!': () -> print 'Hey!!'
-  'Hi!': () -> print '...hey?'
-```
-### `match` with  `struct`
-When using match with values that are not strings, we have to use maps, or arrays mapped like this:
-```coffee
-myStruct = struct foo: 'bar'
-
-myInstance = myStruct foo: 'not bar'
-
-match myInstance, [
-  [myStruct, () -> print 'myInstance is an instance of myStruct']
-]
-```
-
-### `match` with `map`
-```coffee{5}
-class myClass
-
-myInstance = new myClass
-
-match myInstance, map myClass, () -> print 'myInstance is a myClass'
-```
-
-## `map`
-A simple map implementation.
-```coffee
-myMap = map 'key', 'value', 
-  'key2', 'value2'
-
-print myMap
-```
-
-## `imp`
-A simple `require` implementation only for `rew` modules.
-```coffee
-{ LinkedList } = imp 'data'
-list = new LinkedList
-
-list.add('value')
-```
-### importing files
-```coffee
-myFile = imp './myfile.coffee'
-myJs = imp './myfile.js', type: 'js'
-myJson = imp './myfile.json', type: 'json'
-myYaml = imp './myfile.yaml', type: 'yaml'
-myText = imp './myfile.txt', type: 'text'
-```
-
-## `exports`
-A simple export implementation.
-```coffee
-# You can use module.exports
-myVariable = ""
-module.exports = { myVariable }
-# or
-exports { myVariable }
-```
-
-## `input`
-Take user input
-```coffee
-name = input 'Your name: '
-print 'Your name is', name
-
-num = int input 'Age: '
-print num, 'years old'
-```
-
-## `require`
-NodeJS's require
-```coffee
-fs = require 'fs'
-path = require 'path'
-```
-
-## `clear`
-Clear the stdout
-```coffee
-print 'This will be cleared'
-clear()
-```
-
-## `json` and `yaml`
-Parsing json and yaml.
-```coffee
-# Parse JSON
-json '{ "myJson": "input" }'
-# Object to JSON string
-jsons { myObject: 'value' }
-
-# Parse YAML
-yaml 'myProp: value'
-# Object to YAML string
-yamls { myprop: "myValue" }
-```
-
-## `scheduleFrame`
-Basically, it's a `requestAnimationFrame` function.
-```coffee
-num = 0
-myFunc = () -> 
-  clear()
-  print num
-  num++
-  scheduleFrame myFunc
-scheduleFrame myFunc
-```
-
-## `getters` and `setters`
-Define getters and setters
-```coffee
-myObj = {}
-getters myObj, prop: () -> 'some-value'
-setters myObj, prop: (val) -> print 'setting to', val
-```
-
-## `wait`
-Makes async functions to sync.
-```coffee{3}
-axios = require 'axios'
-
-json = wait curl, 'https://api.github.com'
-print json # It will return the response
-```
-For functions declared inside your `rew` context, you can do this:
-```coffee
-myAsyncFunc = () -> 
-  await sleep(1000)
-  'Done'
-
-print myAsyncFunc.wait() # will print Done
-```
-using the `-wait` [directive](/compiler-directives.html), you can remove the use of commas.
-```coffee{1}
--wait curl 'https://api.github.com'
-# Which will translate to
-wait curl, 'https://api.github.com'
-```
-Can also be used with futures or promises:
-```coffee
-wait new Promise (r) -> r someResult
-wait future (r) -> r someResult
+import "#std.fs";
+import "#std!";
 ```

@@ -1,60 +1,24 @@
-# Module `threads`
-The `threads` module is used to create and controls sub threads in a process. `threads` run on a nodejs
-worker context, meaning that the variables and functions in your context won't be shared.
+# Threads
+`#std.threads` is a module that can be used to yk do things in other threads.
 
-```coffee{1}
-{ thread } = imp 'threads'
-```
-
-## Running a thread
-```coffee{4}
-myThread = thread (myData) -> 
-	print myData
-
-myThread.start "Custom Data"
-```
-
-## Thread Functions
+## Example
 ```coffee
-{ on, off, emit, get, stop } = myThread.start "Custom Data"
-```
+import "#std.threads";
 
-## Thread Return Value
-```coffee{3,6}
-myThread = thread (myData) ->
-	# process data
-	@process.finish 'Result Data'
+myWorker = rew::threads::create ->
+  total = 0
+  
+  onmessage (data) ->
+    postMessage({ my_data: "My Value", ...data })
 
-myThread.start "My Data"
-	.get()
-		.then (result) ->
-			print(result)
-```
+myWorker.onmessage (event) ->
+  print "Message from worker:", event.data
 
-## Thread Events
-```coffee
-myThread = thread () ->
-	@process.on 'myEvent', (data) =>
-		print(data)
-		@process.emit 'myEventBack', data: 'smn'
+myWorker.postMessage { somedata: "some value" }
 
-runningThread = myThread.start()
+rew::io::out.print "Active threads:", rew::threads::list().length
 
-runningThread.on 'myEventBack', (data) ->
-  print data, 'back'
-  runningThread.stop()
-
-sleep 1000
-	.then () ->
-		runningThread.emit 'myEvent', data: 'Hello'
-```
-
-You can also stop it using the `thread.stop()` function.
-
-```coffee{4}
-...
-runningThread.on 'myEventBack', (data) ->
-  print data, 'back'
-  runningThread.stop()
-...
+rew::channel::timeout 3000, ->
+  print "Terminating the worker..."
+  myWorker.terminate()
 ```

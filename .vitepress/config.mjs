@@ -22,72 +22,47 @@ export default defineConfig({
         text: 'Starting',
         items: [
           { text: 'Introduction', link: '/introduction' },
-          { text: 'Getting Started', link: '/getting-started' }
+          { text: 'Getting Started', link: '/getting-started' },
+          { text: 'Legacy Rew', link: '/rew-node/' }
         ]
       },
       {
-        text: 'Modules',
+        text: 'Components',
         items: [
           { text: 'App', link: '/app' },
           { text: 'Runtime', link: '/runtime' },
-          { text: 'Conf', link: '/conf' },
-          { text: 'Building', link: '/build' },
-          { text: 'Qrew', link: '/qrew' },
+          { text: 'Compiler', link: '/compiler' },
           { text: 'PacMan', link: '/pacman' },
-          { text: 'Rogue', link: '/rogue' },
-          { text: 'JSX', link: '/jsx' }
+          { text: 'Building', link: '/build' },
         ]
       },
       {
         text: 'API',
         items: [
           { text: 'Core', link: '/core' },
-          { text: 'STDLIB', link: '/stdlib' },
-          { text: 'Context', link: '/context' },
           { text: 'Import-Export', link: '/import-export' },
-          { text: 'Options', link: '/opt' },
-          { text: 'Env', link: '/env' },
           { text: 'Threads', link: '/threads' },
           { text: 'Files', link: '/fs' },
-          { text: 'Shell', link: '/exec' },
-          { text: '<s>UI</s>', link: '/ui' },
-          { text: 'Rune', link: '/rune' },
-          { text: 'Secrets', link: '/secrets' },
-          { text: 'Serve', link: '/serve' },
-          { text: 'Web', link: '/web' }
+          { text: 'Shell', link: '/shell' },
+          { text: 'Net', link: '/net' },
+          { text: 'HTTP', link: '/http' }
         ]
       },
       {
         text: "Directives",
-        link: '/compiler-directives',
+        link: '/directives',
         items: [
-          { text: 'Using', link: '/using' }
-        ]
-      },
-      {
-        text: "Compilers",
-        items: [
-          { text: 'CoffeeScript', link: '/lang-coffee' },
-          { text: 'Civet', link: '/lang-civet' },
-        ]
-      },
-      {
-        text: 'Code and Intellisense',
-        link: '/intellisense',
-        items: [
-          { text: 'JSDoc', link: '/jsdoc' },
-          { text: 'VSCode', link: '/vscode' },
-          { text: 'Other Editors', link: '/other-editors' },
-          { text: 'Typing', link: '/typing' },
+          { text: 'Using', link: '/using' },
+          { text: 'Namespaces', link: '/namespaces' },
+          { text: 'Compiler', link: '/compiler-directive' },
+          { text: 'JSX', link: '/jsx' },
+          { text: 'Declarations', link: '/declarations' }
         ]
       },
       {
         text: 'Packages',
         items: [
-          { text: 'Pimmy', link: '/packages/pimmy' },
-          { text: 'Forge3D', link: '/packages/forge3d' },
-          { text: 'GTK', link: '/packages/gtk' },
-          { text: 'Rayous', link: '/packages/rayous' },
+          { text: 'Pimmy', link: '/pacman' },
         ]
       },
       {
@@ -95,8 +70,6 @@ export default defineConfig({
         link: '/experiments',
         items: [
           { text: 'Phantom Syntax', link: '/expr/phantom' },
-          { text: 'Nodify', link: '/expr/nodify' },
-          { text: 'Rusty Rew', link: '/expr/rusty' },
         ]
       },
       {

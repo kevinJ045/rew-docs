@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Rew"
-  text: "A simple coffeescript runtime"
-  tagline: "Code beauty is the priority"
+  text: "A coffeescript runtime"
+  tagline: "Uh- i'll put something here in the future (probably)"
   image:
     src: /assets/logo.png
     alt: logo

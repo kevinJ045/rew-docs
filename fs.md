@@ -1,32 +1,31 @@
-# Module `fs`
-Rew comes with the node's `fs` module by default, you don't need to import this module as it is there by default.
+# Files
+`#std.fs`
 
-## Functions
-+ `read`: Reads files
-+ `write`: Writes to files
-+ `exists`: Checks if file exists
-+ `fstat`: Gives you the file stats
-+ `rm`: Removes files
-+ `chmod`: Changes file permissions
-+ `mkdir`: Creates Directories
-+ `ls`: Lists Directories
-
-## Helpers
-+ `basename(string, suffix)`: Gives the path's basename
-+ `dirname`: Gives the dirname of the given path
-+ `extname`: Gives the file extension of the given path
-+ `pjoin`: Joins given paths
-+ `presolve`: Resolves given paths
-
-## Examples
+## Example
 ```coffee
-myFile = read './myfile.txt'
-print myFile # file content
+rew::fs::read './path/to/file.txt'
 
-write './myfile.txt', "My content"
+# with rew namespace it gets unwrapped.
+using namespace rew::ns;
+read './path/to/file.txt'
+exists './path/to/place'
+mkdir '...'
+readdir '...'
+```
 
-# Allow access for everyone
-chmod './myfile.txt', 077 
-
-print 'It Exists' if exists './myfile.txt'
+## Class Def
+```coffee
+read(string, { binary: boolean ]}) -> Uint8Array | string
+open(string, options: Object) -> Writable | Readable
+async write(path: string, content: string | Uint8Array, { binary: boolean, create_dirs: boolean }) -> void
+sha(string) -> sha # the sha
+exists(string) -> boolean
+async rm(string, recursive: boolean) -> void
+stats(string) -> Object
+async mkdir(string, recursive: boolean) -> void
+readdir(path) -> void
+copy(string, string) -> void
+rename(string, string) -> void
+isDirectory(string) -> boolean
+isFile(string) -> boolean
 ```

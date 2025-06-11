@@ -1,24 +1,23 @@
 # <img style="display: inline-block; margin-bottom: -7.5px; margin-right: 5px;" src="./assets/logo.png" alt="Logo" width="32"> **Rew**
-Rew is basically a coffeescript runtime, it's simple and... "efficient". it's a project made with
-the goal of potentially ***maybe*** reviving coffeescript.
+Rew is basically a coffeescript runtime, it's written in rust and is focused on giving you an environment where you can use something like `rust` via ffi and get a binary-supported app going. 
 
-In our current time, CoffeeScript is used barely or not at all. Many developers have moved on to other languages and frameworks, but there's still something charming about CoffeeScript's syntax and style. Rew aims to bring back some of that charm by making it easier to run and manage CoffeeScript projects.
+As of now, rew is not another node js runtime, as it does not support node whatsoever, but that may change in the future.
 
-The name "rew" is derived from "brew", echoing the coffee theme associated with CoffeeScript. Just as "brew" brings to mind the process of brewing coffee, "rew" evokes the idea of rapidly running and serving up CoffeeScript code.
+The focus for rew is to make it a simpler way to make desktop apps or services that you'd otherwise make with rust/c.
 
 Here, take a cup of coffee as you explore more about [**Rew**](#):
 ```coffee
-package 'brewery' 
-import '#std'
+package brewery;
+import '#std!';
 
-using namespace std::ns ->
-  define Main class
-    @main: (argv) ->
-      typef(str) brew = (coffee, sugar) ->
-        coffee + sugar + 'ml'
+using namespace std::ns;
 
-      int @coffee = '30ml'
+export function main()
+  typef(str) brew = (coffee, sugar) ->
+    coffee + sugar + 'ml'
 
-      sugar = input 'How much sugar(g)? ' |> int
-      print 'Cup of coffee', brew @coffee, sugar
+  int @coffee = '30ml'
+
+  sugar = input 'How much sugar(g)? ' |> int
+  print 'Cup of coffee', brew @coffee, sugar
 ```
