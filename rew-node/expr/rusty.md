@@ -1,5 +1,5 @@
 # Rusty Rew
-<code><img style="display: inline-block; margin-bottom: -7.5px; margin-right: 5px;" src="../assets/logo.png" alt="Logo" width="22"> **Rew**</code> is being remade with <code><img style="display: inline-block; margin-bottom: -3.5px; margin-right: -5px;" src="../assets/rust.png" alt="Logo" width="22"> rust</code>. The transition was only a matter of time, but this would change the whole focus of rew as a runtime.
+<code><img style="display: inline-block; margin-bottom: -7.5px; margin-right: 5px;" src="../assets/logo.png" alt="Logo" width="22"> **Rew**</code> is being remade with <code><img style="display: inline-block; margin-bottom: -3.5px; margin-right: -5px;" src="../../assets/rust.png" alt="Logo" width="22"> rust</code>. The transition was only a matter of time, but this would change the whole focus of rew as a runtime.
 
 ## Why Rust?
 By now, it's fair to assume you're aware of rust, it's one of the most powerful programming languages out there. It comes with a feature at almost all corners and is generally a good language. 
