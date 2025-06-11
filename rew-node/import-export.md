@@ -1,5 +1,5 @@
 # Import-Export
-Importing and exporting in <code><img style="display: inline-block; margin-bottom: -5.5px; margin-right: 5px;" src="./assets/logo.png" width="18">rew</code> is as easy as in <code><img src="/assets/js.svg" width="12px" style="display: inline" /> javascript</code>.
+Importing and exporting in <code><img style="display: inline-block; margin-bottom: -5.5px; margin-right: 5px;" src="../assets/logo.png" width="18">rew</code> is as easy as in <code><img src="/assets/js.svg" width="12px" style="display: inline" /> javascript</code>.
 
 ## Import
 To import, you can use the normal javascript import syntax, or the `imp` function.
