@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as e,ah as t}from"./chunks/framework.BVCN9yfE.js";const E=JSON.parse('{"title":"Rew Building","description":"","frontmatter":{},"headers":[],"relativePath":"build.md","filePath":"build.md"}'),n={name:"build.md"};function l(h,s,p,k,r,d){return e(),a("div",null,s[0]||(s[0]=[t("",33)]))}const c=i(n,[["render",l]]);export{E as __pageData,c as default};
