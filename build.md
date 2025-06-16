@@ -36,7 +36,7 @@ To use builders, just add a `using: BUILDER_NAME` in your build entry.
 To add custom builders, you need to register `cakes` field in your `app.yaml` as so:
 ```yaml
 cakes:
-  - _build.cake
+  - _build.coffee
 ```
 And from your cake file, you just need to export `builders`, as so:
 ```coffee
@@ -53,6 +53,30 @@ Now to use this, just add a `using: demo_builder` to your entry to test it out.
 ::: details More about cakes
 You can use cakes as preinstall scripts too
 :::
+::: details Why cakes
+I called them cakes to stay true to the original coffeescript `cakefile` concept.
+:::
+
+## Prefetch URLs
+Before build starts, you can `prefetch` a set of URLs and add output them to a file into the current app.
+```yaml
+prefetch:
+  - url: https://example.com/path/to/file
+    output: .artifacts/file
+  # you can also use the file+ schema here
+  - url: file+.+sha(SHA-AAA)+https://example.com/path/to/file-with-sha
+    output: file.with.sha
+```
+### Using unarchiver with prefetch
+You can download and extract archives with:
+```yaml
+prefetch:
+  - url: file+zip+sha(SHA)+https://example.com/path/to/file.zip
+    output: file.zip
+    extract: output_folder
+    # If this is an app, you can do this to build it:
+    build: true
+```
 
 ## Cargo Crates
 You can build cargo crates in your app, this whole process simplifies the use of [FFI](/ffi) in your app. To register crates all you need to do is add `crates` field in your `app.yaml` as follows:

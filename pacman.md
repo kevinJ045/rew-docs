@@ -147,3 +147,94 @@ install:
     - myscript.coffee
     - path/to/dir
 ```
+
+## Github Sources
+You can fetch github repos and resolve/build them and install the result as apps. To do that, here is the format of the github urls you have to put:
+```bash
+# normal
+github:username/repo
+# selective branch
+github:username/repo@branch
+# selective branch with commit
+github:username/repo@branch#commit
+# Commit pinning with default branch
+github:username/repo@main#commit
+```
+### Usage:
+```bash
+pimmy -AS github:username/repo
+```
+::: details Usecases
+You can put it raw like this, or you can put this as a [repo](#repos) url too. 
+:::
+
+## `file+` schema
+If your app has been archived anywhere as an archive, you can use the `file+` schema to download, unarchive and build + install them.
+
+Here is how you would use the schema:
+```bash
+file+unarchiver+https://some_url_here
+```
+Where `unarchiver` can be:
+  -   **zip**
+  -   **tar**
+  -   **tar_gz**
+  -   **tar_xz**
+  -   **tar_bz2**
+  -   **tar_zst**
+  -   **rar**
+  -   **sevenz**
+  -   **.**: to ignore unarchiver
+
+### Using `sha256` with the schema
+To add a sha256 you can simply add a `sha(THE-SHA)` after the `unarchiver`.
+```bash
+file+zip+sha(some-sha)+https://my-url.com/file.zip
+```
+
+
+## Repos
+If you want to create your own repo, you can use a yaml format, and this is it's structure:
+```yaml
+name: repo_name
+packages:
+  example.name: github:myUserName/MyRewApp 
+  another.example: file+zip+https://example.com/example.zip
+```
+You can also import other files in your repo, just so you can separate between packages.
+```yaml
+name: repo_name
+imports:
+  - https://somesite.io/myrepo.yaml
+  - ./myrepo.yaml
+packages:
+  example.name: github:myUserName/MyRewApp
+```
+
+### Repo package structure
+A package could have either just a straight `url`(either github or `file+` schema only) or could have more properties like such:
+```yaml
+packages:
+  my.package.name: github:myUserName/MyRewApp
+  my.other.package:
+    url: file+zip+https://example.com/example.zip
+    readme: https://example.com/readme.md
+    description: bla bla bla
+    version: 0.0.1
+    tags: [
+      a
+      b
+      c
+      d
+      e
+    ]
+```
+
+### Adding/Removing repos
+You can add/remove repos to pimmy with:
+```bash
+# add/overwrite
+pimmy -Ra repo_name //website.com/path/to/repo.yaml
+# remove
+pimmy -Rr other_repo
+```
