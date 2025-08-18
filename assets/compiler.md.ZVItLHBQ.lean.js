@@ -1,0 +1,1 @@
+import{_ as i,c as e,o as a,ah as t}from"./chunks/framework.Co399oHl.js";const k=JSON.parse('{"title":"Compiler","description":"","frontmatter":{},"headers":[],"relativePath":"compiler.md","filePath":"compiler.md"}'),n={name:"compiler.md"};function l(p,s,r,o,h,c){return a(),e("div",null,s[0]||(s[0]=[t("",12)]))}const m=i(n,[["render",l]]);export{k as __pageData,m as default};

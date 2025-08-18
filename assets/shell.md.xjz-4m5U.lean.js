@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as l,ah as h}from"./chunks/framework.BVCN9yfE.js";const o=JSON.parse('{"title":"Shell","description":"","frontmatter":{},"headers":[],"relativePath":"shell.md","filePath":"shell.md"}'),n={name:"shell.md"};function e(t,s,p,k,r,d){return l(),a("div",null,s[0]||(s[0]=[h("",4)]))}const E=i(n,[["render",e]]);export{o as __pageData,E as default};

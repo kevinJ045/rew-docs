@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ah as t}from"./chunks/framework.Co399oHl.js";const g=JSON.parse('{"title":"Threads","description":"","frontmatter":{},"headers":[],"relativePath":"threads.md","filePath":"threads.md"}'),h={name:"threads.md"};function k(e,s,l,p,r,d){return n(),a("div",null,s[0]||(s[0]=[t("",4)]))}const y=i(h,[["render",k]]);export{g as __pageData,y as default};

@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as e,ah as n}from"./chunks/framework.BVCN9yfE.js";const c=JSON.parse('{"title":"Rew Runtime","description":"","frontmatter":{},"headers":[],"relativePath":"runtime.md","filePath":"runtime.md"}'),t={name:"runtime.md"};function h(l,s,p,k,o,d){return e(),a("div",null,s[0]||(s[0]=[n("",20)]))}const E=i(t,[["render",h]]);export{c as __pageData,E as default};

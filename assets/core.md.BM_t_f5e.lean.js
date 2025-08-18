@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ah as h}from"./chunks/framework.Co399oHl.js";const g=JSON.parse('{"title":"Core APIs","description":"","frontmatter":{},"headers":[],"relativePath":"core.md","filePath":"core.md"}'),t={name:"core.md"};function k(l,s,p,e,E,r){return n(),a("div",null,s[0]||(s[0]=[h("",20)]))}const o=i(t,[["render",k]]);export{g as __pageData,o as default};
