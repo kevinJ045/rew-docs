@@ -8,13 +8,31 @@ rew run main.coffee -- -Ab .
 rew run main.coffee -- -Aa .
 ```
 ::: details Requirements
-You will need `cargo` so that you can build the crates in pimmy.
+You will need `cargo` so that you can build the crates in pimmy. If you do not have cargo, it will try to download libraries from guthub.
 :::
+
+### Setup pimmy on windows
+Since `.qrew` doesn't work on windows as of now(or atleast according to my testing), once you clone it, try this:
+```powershell
+# IMPORTANT: this will clean up everything in the current folder
+# DO NOT RUN THIS setup.ps1 OUTSIDE THE rew.pimmy FOLDER!!!
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\setup.ps1
+```
+What this basically does is:
+- Downloads archiveman.dll from github and sets it up
+- Builds pimmy into `brew`
+- Installs it for you
+
 When that is done, pimmy will tell you to add the rew bin path to your `PATH`. If you want executables to work, you have to pass this step.
 
 Once that is all done, You can just run pimmy as:
 ```bash
 pimmy --version
+```
+On **windows**:
+```powershell
+rew run rew.pimmy -- --version
 ```
 A simple test to see if pimmy is available and working.
 

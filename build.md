@@ -66,6 +66,10 @@ prefetch:
   # you can also use the file+ schema here
   - url: file+.+sha(SHA-AAA)+https://example.com/path/to/file-with-sha
     output: file.with.sha
+  # platform specific
+  - url: https://example.com/path/to/file-for-unix
+    system: unix # unix|linux|macos|windows|...
+    output: file.for.unix
 ```
 ### Using unarchiver with prefetch
 You can download and extract archives with:
@@ -89,10 +93,19 @@ crates:
       - input: ./demo_crate/target/release/libdemo_crate.dll
         output: .artifacts/libdemo_crate.dll
         system: windows
+        # Fallback prefetches are prefetch entries that
+        # are only applied when cargo is not found
+        fallback_prefetch:
+          url: https://example.com/files/libdemo_crate.dll
+          output: .artifacts/libdemo_crate.dll
       - input: ./demo_crate/target/release/libdemo_crate.so
         output: .artifacts/libdemo_crate.so
         system: unix
     cleanup: ./demo_crate
+    # You can also use fallback prefetches here, but here it should be an array
+    fallback_prefetch:
+      - url: https://example.com/files/libdemo_crate.dll
+        output: .artifacts/libdemo_crate.dll
 ```
 
 ### Crate triggers

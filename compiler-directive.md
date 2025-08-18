@@ -19,7 +19,7 @@ using public compiler::implicitReturns.disable;
 import "./path/to/something.coffee"; # it will allow coffeeClasses there as well
 ```
 ::: details Notes
-Keep in mind that when you do this, you are guaranteeing each file under it to be compiled differently, therefore maybe breaking other apps that were intended to use differently. But each file can override the previous options by strictly disabling or enabling them in your file.
+Keep in mind that when you do this, you are guaranteeing each file under it to be compiled differently, therefore maybe breaking other apps that were intended to be compiled differently. But each file can override the previous options by strictly disabling or enabling them in your file.
 :::
 
 ## All options
