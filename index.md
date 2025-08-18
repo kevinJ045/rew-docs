@@ -21,10 +21,16 @@ hero:
       link: /updates
 
 features:
-  - title: 🚀 Runtime Execution
-    details: Rew provides a runtime for CoffeeScript, allowing you to execute CoffeeScript files quickly and efficiently without pre-compilation
-  - title: 🛠️ File Watching and Auto-Rerun
-    details: With the -w or --watch option, Rew can watch your CoffeeScript files for changes and automatically rerun them, streamlining your development workflow by providing instant feedback on code modifications
-  - title: 📦 Project Creation and Management
-    details: Rew includes commands to easily create new CoffeeScript projects and manage their configurations, simplifying the setup process and helping you maintain organized project structures.
+  - icon:
+      src: /assets/js.svg
+    title: Persistent JsRuntime Execution State
+    details: rew embeds Deno’s JsRuntime and ensures execution context is shared across calls. This allows modules, global variables, and ops to persist, so subsequent script executions can interact with previous state instead of running in isolated sandboxes.
+  - icon:
+      src: /assets/rust.png
+    title: FFI & Native Bindings
+    details: It supports a flexible FFI system where Rust functions, structs, and even shared libraries (.so/.dll) can be registered and called directly from JavaScript code, making it easier to extend with native functionality.
+  - icon:
+      src: /assets/logo.png
+    title: Extensible Compilation Pipeline
+    details: rew allows custom directives like `#declare` and `#declare*`, JSX-like syntax, and CoffeeScript-inspired compilation. This makes it possible to define language features, transformations, and experimental syntax without patching the runtime itself.
 ---
