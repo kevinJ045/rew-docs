@@ -1,4 +1,7 @@
 # Declarations
+::: warning Warning
+Feature is still experimental
+:::
 In rew, there is a special syntax called declarators.
 
 #### Example:

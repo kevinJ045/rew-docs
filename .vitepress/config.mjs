@@ -56,6 +56,7 @@ export default defineConfig({
           { text: 'Namespaces', link: '/namespaces' },
           { text: 'Compiler', link: '/compiler-directive' },
           { text: 'JSX', link: '/jsx' },
+          { text: 'Macros', link: '/macros' },
           { text: 'Declarations', link: '/declarations' }
         ]
       },
