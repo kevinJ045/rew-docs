@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as n,ah as e}from"./chunks/framework.Co399oHl.js";const c=JSON.parse('{"title":"Using","description":"","frontmatter":{},"headers":[],"relativePath":"using.md","filePath":"using.md"}'),t={name:"using.md"};function l(h,s,p,k,r,o){return n(),a("div",null,s[0]||(s[0]=[e("",8)]))}const d=i(t,[["render",l]]);export{c as __pageData,d as default};

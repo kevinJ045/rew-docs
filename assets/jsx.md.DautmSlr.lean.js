@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ah as t}from"./chunks/framework.CbGIGEAd.js";const r=JSON.parse('{"title":"JSX","description":"","frontmatter":{},"headers":[],"relativePath":"jsx.md","filePath":"jsx.md"}'),e={name:"jsx.md"};function l(p,s,h,k,d,o){return n(),a("div",null,[...s[0]||(s[0]=[t("",7)])])}const E=i(e,[["render",l]]);export{r as __pageData,E as default};

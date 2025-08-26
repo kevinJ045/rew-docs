@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as e,ah as n}from"./chunks/framework.CbGIGEAd.js";const o=JSON.parse('{"title":"Rew Building","description":"","frontmatter":{},"headers":[],"relativePath":"build.md","filePath":"build.md"}'),t={name:"build.md"};function l(h,s,p,k,r,d){return e(),a("div",null,[...s[0]||(s[0]=[n("",33)])])}const c=i(t,[["render",l]]);export{o as __pageData,c as default};
