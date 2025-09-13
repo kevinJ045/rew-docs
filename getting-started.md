@@ -17,9 +17,9 @@ Okay, you'd expect me to have released it for every distro out there, and i will
 ## Most linux distros
 On most linux distros, this should work:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/kevinj045/rew/main/install-rew.sh | bash
+curl -fsSL https://raw.githubusercontent.com/kevinj045/rew/main/install-linux.sh | bash
 ```
-[here](https://raw.githubusercontent.com/kevinj045/rew.pimmy/main/install-rew.sh) is the script if you want to read it before you run it (which i highly advice).
+[here](https://raw.githubusercontent.com/kevinj045/rew.pimmy/main/install-linux.sh) is the script if you want to read it before you run it (which i highly advice).
 
 ## Nix systems
 On nix systems there is a flake for it, so you can always setup the flake, but like- even if you input it rn, it's not setup to do anything really.
