@@ -5,7 +5,7 @@ Rew has not yet really been released for all platforms, but you can install it o
 ## Windows
 Well, you can either download [this](https://github.com/kevinj045/rew/releases/latest/download/rew.exe) and put it in your path or just run this as administrator:
 ```bash
-irm https://raw.githubusercontent.com/kevinj045/rew.pimmy/main/install-windows.ps1 | iex
+irm https://raw.githubusercontent.com/kevinj045/rew/main/install-windows.ps1 | iex
 ```
 
 ## MacOS
@@ -17,7 +17,7 @@ Okay, you'd expect me to have released it for every distro out there, and i will
 ## Most linux distros
 On most linux distros, this should work:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/kevinj045/rew.pimmy/main/install-rew.sh | bash
+curl -fsSL https://raw.githubusercontent.com/kevinj045/rew/main/install-rew.sh | bash
 ```
 [here](https://raw.githubusercontent.com/kevinj045/rew.pimmy/main/install-rew.sh) is the script if you want to read it before you run it (which i highly advice).
 

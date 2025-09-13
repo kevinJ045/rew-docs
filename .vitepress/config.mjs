@@ -40,12 +40,14 @@ export default defineConfig({
         text: 'API',
         items: [
           { text: 'Core', link: '/core' },
+          { text: 'Pointers', link: '/pointers' },
           { text: 'Import-Export', link: '/import-export' },
           { text: 'Threads', link: '/threads' },
           { text: 'Files', link: '/fs' },
           { text: 'Shell', link: '/shell' },
           { text: 'Net', link: '/net' },
-          { text: 'HTTP', link: '/http' }
+          { text: 'HTTP', link: '/http' },
+          { text: 'FFI', link: '/ffi' }
         ]
       },
       {

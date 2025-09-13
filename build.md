@@ -1,5 +1,5 @@
 # Rew Building
-Building in `rew` is only possible with `pimmy`. As it gives a lot of utility for package management without affecting the size or performance of rew.
+Rew comes with a simple builder to manage how your app is supposed to act when installed or just when you build it.
 
 To build a simple file from `coffee` to `brew`, you can do so with `rew`:
 ```bash
@@ -9,8 +9,8 @@ rew brew input.coffee output.brew
 ## What is a `brew` file?
 A brew file is just a bundle of all modules in an app, with externals unbundled. .brew files have a built in support to run as entries, be imported/exported, or just ran.
 
-## Building with pimmy
-To build with pimmmy, you need a `build` field in your `app.yaml`. 
+## Building 
+To build, you need a `build` field in your `app.yaml`. 
 ```yaml
 build:
   - input: entry.coffee
@@ -27,12 +27,20 @@ build:
 **Explanation**:
 So, basically you take an input from your app root `entry.coffee`, and build it to output `output.brew` at the root of your app. This uses `brew` to build, then after it finishes, it deletes `entry.coffee`.
 
-## Pimmy Builders
-As of now, pimmy only supports two builders, `brew` and `qrew`. `qrew` is a binary executable that uses a `brew` file to render your `brew` to an executable `qrew` that runs without needing to install `rew`.
+## Builders
+As of now, rew only supports these builders:
+- `brew`
+- `qrew`
+- `make`
+- `rustc`
+- `cc | clang | gcc`
+- `zig`
+
+`qrew` is a binary executable that uses a `brew` file to render your `brew` to an executable `qrew` that runs without needing to install `rew`.
 
 To use builders, just add a `using: BUILDER_NAME` in your build entry.
 
-## Custom Builders
+<!-- ## Custom Builders
 To add custom builders, you need to register `cakes` field in your `app.yaml` as so:
 ```yaml
 cakes:
@@ -55,7 +63,7 @@ You can use cakes as preinstall scripts too
 :::
 ::: details Why cakes
 I called them cakes to stay true to the original coffeescript `cakefile` concept.
-:::
+::: -->
 
 ## Prefetch URLs
 Before build starts, you can `prefetch` a set of URLs and add output them to a file into the current app.
@@ -121,3 +129,22 @@ build:
     output: main.brew
     id: my_trigger_id
 ```
+
+## CMods (C Module Configs)
+Just like crates, you can define CMods in your app.yaml. They work the same way: you provide a path, files to use, build flags, cleanup, and optional fallback downloads.
+```yaml
+cmods:
+  - name: demo_cmod
+    path: ./demo_cmod
+    build: true
+    flags: "-o libdemo.so main.c"
+    files:
+      - input: ./demo_cmod/libdemo.so
+        output: .artifacts/libdemo.so
+        system: unix
+    cleanup: ./demo_cmod
+    fallback_prefetch:
+      - url: https://example.com/files/libdemo.so
+        output: .artifacts/libdemo.so
+```
+This works almost exactly like `crates`, so if you’re familiar with `crates`, using `cmods` is just as easy.
