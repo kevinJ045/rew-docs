@@ -1,1 +1,0 @@
-import{_ as i,c as a,o as h,ah as n}from"./chunks/framework.CbGIGEAd.js";const g=JSON.parse('{"title":"Net","description":"","frontmatter":{},"headers":[],"relativePath":"net.md","filePath":"net.md"}'),k={name:"net.md"};function t(l,s,p,e,E,r){return h(),a("div",null,[...s[0]||(s[0]=[n("",4)])])}const y=i(k,[["render",t]]);export{g as __pageData,y as default};

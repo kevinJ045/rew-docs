@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,ah as e}from"./chunks/framework.CVAVWnPP.js";const c=JSON.parse('{"title":"Macros","description":"","frontmatter":{},"headers":[],"relativePath":"macros.md","filePath":"macros.md"}'),n={name:"macros.md"};function l(h,s,p,r,k,o){return t(),a("div",null,[...s[0]||(s[0]=[e("",29)])])}const E=i(n,[["render",l]]);export{c as __pageData,E as default};

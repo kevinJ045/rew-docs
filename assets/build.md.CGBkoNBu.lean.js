@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ah as l}from"./chunks/framework.CVAVWnPP.js";const o=JSON.parse('{"title":"Rew Building","description":"","frontmatter":{},"headers":[],"relativePath":"build.md","filePath":"build.md"}'),e={name:"build.md"};function t(h,s,p,k,r,d){return n(),a("div",null,[...s[0]||(s[0]=[l("",31)])])}const c=i(e,[["render",t]]);export{o as __pageData,c as default};

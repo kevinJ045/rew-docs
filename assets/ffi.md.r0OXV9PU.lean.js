@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ah as e}from"./chunks/framework.CVAVWnPP.js";const E=JSON.parse('{"title":"FFI in Rew","description":"","frontmatter":{},"headers":[],"relativePath":"ffi.md","filePath":"ffi.md"}'),t={name:"ffi.md"};function h(l,s,p,k,r,d){return n(),a("div",null,[...s[0]||(s[0]=[e("",8)])])}const c=i(t,[["render",h]]);export{E as __pageData,c as default};

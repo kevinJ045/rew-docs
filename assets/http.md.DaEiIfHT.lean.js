@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as t,ah as h}from"./chunks/framework.CVAVWnPP.js";const E=JSON.parse('{"title":"HTTP","description":"","frontmatter":{},"headers":[],"relativePath":"http.md","filePath":"http.md"}'),e={name:"http.md"};function p(n,s,l,k,r,d){return t(),a("div",null,[...s[0]||(s[0]=[h("",4)])])}const c=i(e,[["render",p]]);export{E as __pageData,c as default};
